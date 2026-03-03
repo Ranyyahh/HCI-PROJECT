@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    user-select: none;
+}
+
+.bar {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 0 15px;               
+    box-sizing: border-box;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background: #0e2d51;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;                
+}
+
+.header-text {
+    font-family: 'Dm Sans', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;  
+    margin-left: 15px;           
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 300px;
+    height: calc(100vh - 75px); 
+    position: fixed;
+    left: 20px;
+    top: 90px;                
+    padding-top: 10px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 0% 0%, #142754, #6687d4);
+}
+
+.box-img {
+    width: 50px;     
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 12px 0;
+    background: #2d4777;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+
+.nav-item {
+    display: flex;             
+    align-items: center;       
+    gap: 10px;                 
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 17px;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.nav-item.active {
+    background: #6d8fc4;
+    font-weight: bold;
+}
+
+
+.main-content {
+    margin-left: 350px;   
+    margin-top: 75px;    
+    padding: 30px 40px;   
+    width: calc(100% - 350px);
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: #2f4f7f;
+    margin-top: 0;            
+    margin-bottom: 5px;
+}
+
+
+.page-desc {
+    color: #2f4f7f;
+    margin-bottom: 30px;
+    font-size: 27px;
+}
+
+
+.sample-header {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f4f7f;
+    margin-bottom: 8px;
+     margin-left: 100px; 
+}
+
+.sample-header span {
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+.sample-box {
+    width: 100%;
+    height: 300px;  
+    background: #ffffff;
+    border: 2px solid #2f4f7f;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}

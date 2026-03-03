@@ -2,7 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+body {
+    user-select: none;
+}
 
 .bar {
     width: 100%;
@@ -83,6 +85,8 @@ p{
     font-family: 'Dm Sans', sans-serif;
     color: #2f4f7f;
     font-size: 20px;
+    text-decoration: none;    
+    cursor: pointer; 
     font-weight: bold;
     margin-left: 330px;
     margin-top: 10px;
