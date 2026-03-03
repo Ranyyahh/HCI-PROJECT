@@ -67,15 +67,30 @@ if(isset($_POST['mul1']) && isset($_POST['mul2'])){
 
     <!-- SAMPLE 1 -->
     <div class="sample-header">
-        Sample 1 - <span>Reverse Convertion</span>
+    Sample 1 - <span>Reverse Conversion</span>
+</div>
+
+<div id="sample1" class="sample-box">
+
+    <div class="sample-left">
+        <form method="POST">
+            <input type="hidden" name="section" value="sample1">
+            Enter Text: <input type="text" name="reverse">
+            <button type="submit">Reverse</button>
+        </form>
+
+        <p class="output"><?php echo $output1; ?></p>
     </div>
-    <div class="sample-box">
-       <form method="POST">
-    Enter Text: <input type="text" name="reverse">
-    <button type="submit">Reverse</button>
-</form>
-<p><?php echo $output1; ?></p>
+
+    <div class="sample-right">
+        <h4>Description</h4>
+        <p>
+            This example shows how to reverse a string input by a user. 
+        </p>
     </div>
+
+</div>
+
 
     <!-- SAMPLE 2 -->
     <div class="sample-header">
