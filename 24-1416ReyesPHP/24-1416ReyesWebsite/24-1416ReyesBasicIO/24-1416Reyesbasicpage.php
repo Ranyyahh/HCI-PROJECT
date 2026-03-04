@@ -53,6 +53,9 @@ if(!isset($_SESSION['basic_io'])){
     </p>
 
     <!-- SAMPLE 1 -->
+     <div class="sample-header">
+    Sample 1 - <span>Reverse Conversion</span>
+</div>
     <div id="sample1" class="sample-box">
 
     <!-- LEFT (INPUT) -->
