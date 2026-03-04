@@ -1,3 +1,8 @@
+<?php
+session_start();
+unset($_SESSION['basic_io']);
+?>
+
 <html>
 <head>
     <title>HCI PROJECT</title>

@@ -177,6 +177,126 @@ body {
     cursor: pointer;
 }
 
+
+#sample3 .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 120px;
+}
+#sample3 .input-row:first-child {
+    margin-top: 50px;   
+}
+
+#sample3 .input-row label {
+    width: 120px;      
+    font-size: 23px;
+}
+
+#sample3 .input-row input {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+#sample3 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: 25px;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+#sample3 .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 120px;
+}
+#sample3 .input-row:first-child {
+    margin-top: 50px;   
+}
+
+#sample3 .input-row label {
+    width: 120px;      
+    font-size: 23px;
+}
+
+#sample3 .input-row input {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+#sample3 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: 25px;
+    padding: 12px 105px;
+    border-radius: 8px;
+}
+
+
+#sample4 .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 120px;
+}
+#sample4 .input-row:first-child {
+    margin-top: 50px;  
+}
+
+#sample4 .input-row label {
+    width: 120px;      
+    font-size: 21px;
+}
+
+#sample4 .input-row input {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+#sample4 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: 10px;
+    padding: 12px 80px;
+    border-radius: 8px;
+}
+
+
+
+#sample5 .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 120px;
+}
+#sample5 .input-row:first-child {
+    margin-top: 60px;  
+}
+
+#sample5 .input-row label {
+    width: 120px;      
+    font-size: 22px;
+}
+
+#sample5 .input-row input {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+#sample5 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: 10px;
+    padding: 12px 90px;
+    border-radius: 8px;
+}
+
 .sample-right {
     flex: 1;
     padding: 20px;
@@ -191,8 +311,9 @@ body {
 }
 
 .output {
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: bold;
+    margin-right: 20px;
 }
 
 .back-btn {

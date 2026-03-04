@@ -1,31 +1,45 @@
 <?php
+session_start();
 
-$output1 = "";
+if(!isset($_SESSION['basic_io'])){
+    $_SESSION['basic_io'] = [];
+}
+
+/* SAMPLE 1 */
 if(isset($_POST['reverse'])){
-    $output1 = "Reversed: " . strrev($_POST['reverse']);
+    $_SESSION['basic_io']['reverse'] = $_POST['reverse'];
+    $_SESSION['basic_io']['output1'] = "Reversed: " . strrev($_POST['reverse']);
 }
 
-$output2 = "";
+/* SAMPLE 2 */
 if(isset($_POST['name'])){
-    $output2 = "Hello, " . $_POST['name'];
+    $_SESSION['basic_io']['name'] = $_POST['name'];
+    $_SESSION['basic_io']['output2'] = "Hello, " . $_POST['name'];
 }
 
-$output3 = "";
+/* SAMPLE 3 */
 if(isset($_POST['num1']) && isset($_POST['num2'])){
-    $output3 = "Sum: " . ($_POST['num1'] + $_POST['num2']);
+    $_SESSION['basic_io']['num1'] = $_POST['num1'];
+    $_SESSION['basic_io']['num2'] = $_POST['num2'];
+    $_SESSION['basic_io']['output3'] = "Sum: " . ($_POST['num1'] + $_POST['num2']);
 }
 
-$output4 = "";
+/* SAMPLE 4 */
 if(isset($_POST['weight']) && isset($_POST['height'])){
+    $_SESSION['basic_io']['weight'] = $_POST['weight'];
+    $_SESSION['basic_io']['height'] = $_POST['height'];
+
     if($_POST['height'] != 0){
         $bmi = $_POST['weight'] / ($_POST['height'] * $_POST['height']);
-        echo "BMI: " . round($bmi,2);
+        $_SESSION['basic_io']['output4'] = "BMI: " . round($bmi,2);
     }
 }
 
-$output5 = "";
+/* SAMPLE 5 */
 if(isset($_POST['mul1']) && isset($_POST['mul2'])){
-    echo "Product: " . ($_POST['mul1'] * $_POST['mul2']);
+    $_SESSION['basic_io']['mul1'] = $_POST['mul1'];
+    $_SESSION['basic_io']['mul2'] = $_POST['mul2'];
+    $_SESSION['basic_io']['output5'] = "Product: " . ($_POST['mul1'] * $_POST['mul2']);
 }
 ?>
 
@@ -53,7 +67,7 @@ if(isset($_POST['mul1']) && isset($_POST['mul2'])){
         <a href="../24-1416ReyesPHP/24-1416Reyesvarspage.php" class="nav-item"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
         <a href="../24-1416ReyesPHP/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
         <a href="../24-1416ReyesPHP/24-1416Reyesloopspage.php" class="nav-item"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
-        <a href="../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
+        <a href="../24-1416ReyesHTML/24-1416ReyesWelcomepage.php" class="back-btn"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
@@ -74,12 +88,11 @@ if(isset($_POST['mul1']) && isset($_POST['mul2'])){
 
     <div class="sample-left">
         <form method="POST">
-            <input type="hidden" name="section" value="sample1">
-            Enter Text: <input type="text" name="reverse">
+            Enter Text: <input type="text" name="reverse" value="<?php echo isset($_SESSION['basic_io']['reverse']) ? $_SESSION['basic_io']['reverse'] : ''; ?>">
             <button type="submit">Reverse</button>
         </form>
 
-        <p class="output"><?php echo $output1; ?></p>
+        <p class="output"><?php echo isset($_SESSION['basic_io']['output1']) ? $_SESSION['basic_io']['output1'] : ''; ?></p>
     </div>
 
     <div class="sample-right">
@@ -96,53 +109,120 @@ if(isset($_POST['mul1']) && isset($_POST['mul2'])){
     <div class="sample-header">
         Sample 2 - <span>Name Greeting</span>
     </div>
-    <div class="sample-box">
+    <div id= "sample2" class="sample-box">
+        <div class="sample-left">
         <form method="POST">
-        Enter Name: <input type="text" name="name">
+        Enter Name: <input type="text" name="name" value="<?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ''; ?>">
         <button type="submit">Submit</button>
     </form>
-    <p><?php echo $output2; ?></p>
+    <p class="output"><?php echo isset($_SESSION['output2']) ? $_SESSION['output2'] : ''; ?></p>
     </div>
+
+        <div class="sample-right">
+        <h4>Description</h4>
+        <p>
+            This example shows the process of greeting the user by their name. The user will input their own name and the system will process it to greet them with a message.
+        </p>
+    </div>
+
+</div>
 
     <!-- SAMPLE 3 -->
     <div class="sample-header">
         Sample 3 - <span>Sum of Two Numbers</span>
     </div>
     
-    <div class="sample-box">
-        <form method="POST">
-        Number 1: <input type="number" name="num1"><br>
-        Number 2: <input type="number" name="num2"><br>
-        <button type="submit">Add</button>
-    </form>
-    <p><?php echo $output3; ?></p>
+    <div id= "sample3" class="sample-box">
+        <div class="sample-left">
+       <form method="POST">
+    
+    <div class="input-row">
+        <label>Number 1:</label>
+        <input type="number" name="num1" value="<?php echo isset($_SESSION['num1']) ? $_SESSION['num1'] : ''; ?>">
     </div>
+
+    <div class="input-row">
+        <label>Number 2:</label>
+        <input type="number" name="num2" value="<?php echo isset($_SESSION['num2']) ? $_SESSION['num2'] : ''; ?>">
+    </div>
+
+    <button type="submit" class="add-btn">Add</button>
+</form>
+    <p class="output"><?php echo isset($_SESSION['output3']) ? $_SESSION['output3'] : ''; ?></p>
+    </div>
+
+    <div class="sample-right">
+        <h4>Description</h4>
+        <p>
+            This example shows the process of adding two numbers input by the user. The user will input two numbers and the system will display the sum of it.
+        </p>
+    </div>
+
+</div>
 
     <!-- SAMPLE 4 -->
     <div class="sample-header">
         Sample 4 - <span>BMI Calculator</span>
     </div>
-    <div class="sample-box">
+    <div id= "sample4" class="sample-box">
+        <div class="sample-left">
         <form method="POST">
-    Weight (kg): <input type="number" name="weight" step="0.1">
-    Height (m): <input type="number" name="height" step="0.01">
-    <button type="submit">Calculate</button>
+            <div class="input-row">
+                <label>Weight (kg):</label>
+                <input type="number" name="weight" value="<?php echo isset($_SESSION['weight']) ? $_SESSION['weight'] : ''; ?>">
+            </div>
+
+            <div class="input-row">
+                <label>Height (m):</label>
+                <input type="number" name="height" value="<?php echo isset($_SESSION['height']) ? $_SESSION['height'] : ''; ?>">
+            </div>
+    <button type="submit" class="add-btn">Calculate</button>
 </form>
+ <p class="output"><?php echo isset($_SESSION['output4']) ? $_SESSION['output4'] : ''; ?></p>
     </div>
+
+      <div class="sample-right">
+        <h4>Description</h4>
+        <p>
+           This example shows the process of calculating the Body Mass Index (BMI) based on the height and weight input by the user.
+    </div>
+
+</div>
+
 
     <!-- SAMPLE 5 -->
     <div class="sample-header">
         Sample 5 - <span>Product of Two Numbers</span>
     </div>
-    <div class="sample-box">
+    <div id= "sample5" class="sample-box">
+         <div class="sample-left">
         <form method="POST">
-    Number 1: <input type="number" name="mul1">
-    Number 2: <input type="number" name="mul2">
-    <button type="submit">Multiply</button>
-</form>
+             <div class="input-row">
+                <label>Number 1: </label>
+                <input type="number" name="mul1" value="<?php echo isset($_SESSION['mul1']) ? $_SESSION['mul1'] : ''; ?>">
+             </div>
+
+     <div class="input-row">
+        <label>Number 2: </label>
+        <input type="number" name="mul2" value="<?php echo isset($_SESSION['mul2']) ? $_SESSION['mul2'] : ''; ?>">
     </div>
-</div>
+    <button type="submit" class="add-btn">Multiply</button>
+    
+</form>
+<p class="output"><?php echo isset($_SESSION['output5']) ? $_SESSION['output5'] : ''; ?></p>
+    </div>
+
+      <div class="sample-right">
+        <h4>Description</h4>
+        <p>
+           This example shows the process of multiplying two numbers input by the user.
+    </div>
 
 </div>
+</div>
+
+
+</div>
+
     </body>
 </html>
