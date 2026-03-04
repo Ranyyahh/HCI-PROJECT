@@ -254,35 +254,29 @@ body {
     border-radius: 8px;
 }
 
-
-
-
-#sample5 .input-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    margin-right: 120px;
-}
-#sample5 .input-row:first-child {
-    margin-top: 60px;  
+#sample5 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
 }
 
-#sample5 .input-row label {
-    width: 120px;      
-    font-size: 22px;
+#mul1Input {
+    font-size: 20px;
+    height: 37px;
+    margin-left: 15px;
 }
 
-#sample5 .input-row input {
-    flex: 1;
-    padding: 8px 10px;
-    font-size: 18px;
+#mul2Input {
+    font-size: 20px;
+    height: 37px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 #sample5 .add-btn {
     display: block;
-    margin-left: 120px;
-    margin-top: 10px;
-    padding: 12px 90px;
+    margin-left: 125px;
+    margin-top: -20px;
+    padding: 9px 90px;
     border-radius: 8px;
 }
 

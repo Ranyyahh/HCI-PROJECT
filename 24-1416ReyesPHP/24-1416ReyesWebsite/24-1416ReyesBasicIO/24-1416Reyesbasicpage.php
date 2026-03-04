@@ -44,7 +44,7 @@ if(!isset($_SESSION['basic_io'])){
         <a href="24-1416Reyesvarspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
         <a href="24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
         <a href="24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
-        <a href=".../../../24-1416ReyesReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
+        <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
@@ -225,35 +225,51 @@ if(!isset($_SESSION['basic_io'])){
 
 </div>
 
-    <!-- SAMPLE 5 -->
-    <div class="sample-header">
-        Sample 5 - <span>Product of Two Numbers</span>
-    </div>
-    <div id= "sample5" class="sample-box">
-         <div class="sample-left">
-        <form method="POST">
-             <div class="input-row">
-                <label>Number 1: </label>
-                <input type="number" name="mul1" value="<?php echo isset($_SESSION['basic_io']['mul1']) ? $_SESSION['basic_io']['mul1'] : ''; ?>">
-             </div>
+ <!-- SAMPLE 5 -->
+<div class="sample-header">
+    Sample 5 - <span>Product of Two Numbers</span>
+</div>
 
-     <div class="input-row">
-        <label>Number 2: </label>
-        <input type="number" name="mul2" value="<?php echo isset($_SESSION['basic_io']['mul2']) ? $_SESSION['basic_io']['mul2'] : ''; ?>">
-    </div>
-    <button type="submit" class="add-btn">Multiply</button>
-    
-</form>
-<p class="output"><?php echo isset($_SESSION['basic_io']['output5']) ? $_SESSION['basic_io']['output5'] : ''; ?></p>
+<div id="sample5" class="sample-box">
+
+    <!-- LEFT (INPUT) -->
+    <div class="sample-left">
+        <form id="multiplyForm">
+
+            <label class="section-label">Input</label>
+            <br><br>
+
+            <label>Number 1:</label>
+            <input type="number" id="mul1Input">
+
+            <br>
+
+            <label>Number 2:</label>
+            <input type="number" id="mul2Input">
+
+            <br><br>
+
+            <button type="submit" class="add-btn">Multiply</button>
+
+        </form>
     </div>
 
-      <div class="sample-right">
+    <!-- MIDDLE (OUTPUT) -->
+    <div class="sample-middle">
+        <label>Output</label>
+        <div class="output-box" id="multiplyOutput"></div>
+    </div>
+
+    <!-- RIGHT (DESCRIPTION) -->
+    <div class="sample-right">
         <h4>Description</h4>
         <p>
-           This example shows the process of multiplying two numbers input by the user.
+            This example shows the process of multiplying two numbers 
+            input by the user. The system will compute and display 
+            their product.
+        </p>
     </div>
 
-</div>
 </div>
 
 

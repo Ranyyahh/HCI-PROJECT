@@ -123,6 +123,38 @@ document.getElementById("bmiForm").addEventListener("submit", function(e){
         localStorage.setItem("bmiOutput", data);
 
     });
+});
+
+
+ /* =========================
+   SAMPLE 5 - MULTIPLY
+========================= */
+
+document.getElementById("multiplyForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let mul1 = document.getElementById("mul1Input").value;
+    let mul2 = document.getElementById("mul2Input").value;
+
+    fetch("24-1416Reyesmul_process.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "mul1=" + encodeURIComponent(mul1) +
+              "&mul2=" + encodeURIComponent(mul2)
+    })
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById("multiplyOutput").textContent = data;
+
+        localStorage.setItem("mul1Input", mul1);
+        localStorage.setItem("mul2Input", mul2);
+        localStorage.setItem("multiplyOutput", data);
+
+    });
 
 });
 
@@ -166,10 +198,18 @@ window.addEventListener("load", function(){
     document.getElementById("bmiOutput").textContent =
         localStorage.getItem("bmiOutput") || "";
 
+         // Sample 5
+    document.getElementById("mul1Input").value =
+        localStorage.getItem("mul1Input") || "";
+
+    document.getElementById("mul2Input").value =
+        localStorage.getItem("mul2Input") || "";
+
+    document.getElementById("multiplyOutput").textContent =
+        localStorage.getItem("multiplyOutput") || "";
+
 });
 
 
-/* =========================
-   AUTO CLEAR WHEN LEAVING PAGE
-========================= */
+
 
