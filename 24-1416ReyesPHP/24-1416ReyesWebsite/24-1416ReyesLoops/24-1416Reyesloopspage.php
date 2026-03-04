@@ -216,7 +216,6 @@ if(!isset($_SESSION['loops'])){
     </div>
 
 </div>
-
 <!-- SAMPLE 5 -->
 <div class="sample-header">
     Sample 5 - <span>Do While: ABCD Company Billing</span>
@@ -225,23 +224,23 @@ if(!isset($_SESSION['loops'])){
 <div id="sample5" class="sample-box">
 
 <div class="sample-left">
-    <form id="billingForm">
+    <form id="billingForm" method="POST">  <!-- Added method="POST" -->
 
         <label class="section-label">Input</label>
         <br><br>
 
         <label>Customer Name:</label>
-        <input type="text" id="customerName" required>
+        <input type="text" name="customerName" id="customerName" required>  <!-- Added name attribute -->
 
         <br><br>
 
         <label>Class Code (1-3):</label>
-        <input type="number" id="classCode" required>
+        <input type="number" name="classCode" id="classCode" required>  <!-- Added name attribute -->
 
         <br><br>
 
         <label>No. of Days:</label>
-        <input type="number" id="days" required>
+        <input type="number" name="days" id="days" required>  <!-- Added name attribute -->
 
         <br><br>
 
@@ -267,7 +266,6 @@ if(!isset($_SESSION['loops'])){
     </div>
 
 </div>
-
 </div>
 <script src="../../../24-1416ReyesJS/24-1416ReyesLoopspage/24-1416Reyesloop.js"></script>
     </body>

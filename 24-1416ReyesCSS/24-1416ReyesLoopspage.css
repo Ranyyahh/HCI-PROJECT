@@ -339,6 +339,31 @@ body {
     margin-bottom: 10px;
 }
 
+#sample5 .output-box {
+    width: 320px;
+    height: 80px;                
+    min-height: 80px;
+    max-height: 80px;
+
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    display: block;               
+    
+    white-space: nowrap;         
+    overflow-x: auto;             
+    overflow-y: hidden;          
+
+}
+
 #sample5 .add-btn {
     grid-column: span 2;      
     justify-self: center;   

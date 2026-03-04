@@ -117,49 +117,72 @@ document.getElementById("reverseWhileForm").addEventListener("submit", function(
 
 });
 
-
 // ==============================
-// SAMPLE 5 – Billing (Do While)
+// SAMPLE 5 – Billing (Do While) - IMPROVED VERSION
 // ==============================
 
 document.getElementById("billingForm").addEventListener("submit", function(e) {
-
     e.preventDefault();
 
+    // Get input values
     let name = document.getElementById("customerName").value.trim();
     let classCode = document.getElementById("classCode").value;
     let days = document.getElementById("days").value;
 
+    // Validation
     if(name === "" || classCode === "" || days === "") {
-        document.getElementById("multipleDoOutput").innerHTML = "Please complete all fields.";
+        document.getElementById("multipleDoOutput").innerHTML = "⚠️ Please complete all fields.";
         return;
     }
 
+    // Validate class code range (1-3)
+    if(classCode < 1 || classCode > 3) {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "⚠️ Class code must be between 1 and 3 only.";
+        return;
+    }
+
+    // Validate days (positive number)
+    if(days <= 0) {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "⚠️ Number of days must be greater than 0.";
+        return;
+    }
+
+    // Show loading message
+    document.getElementById("multipleDoOutput").innerHTML = "Computing...";
+
+    // Send data to PHP
     fetch("24-1416Reyesdowhile_billingprocess.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        body:
-            "customerName=" + encodeURIComponent(name) +
-            "&classCode=" + encodeURIComponent(classCode) +
-            "&days=" + encodeURIComponent(days)
+        body: "customerName=" + encodeURIComponent(name) +
+              "&classCode=" + encodeURIComponent(classCode) +
+              "&days=" + encodeURIComponent(days)
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.text();
+    })
     .then(data => {
-
+        // Display the result
         document.getElementById("multipleDoOutput").innerHTML = data;
-
+        
+        // Save to localStorage
         localStorage.setItem("customerName", name);
         localStorage.setItem("classCode", classCode);
         localStorage.setItem("days", days);
         localStorage.setItem("multipleDoOutput", data);
-
     })
-    .catch(() => {
-        document.getElementById("multipleDoOutput").innerHTML = "Error processing request.";
+    .catch(error => {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "❌ Error processing request. Please try again.";
+        console.error("Error:", error);
     });
-
 });
 
 
@@ -244,4 +267,27 @@ document.getElementById("resetMultipleDo").addEventListener("click", function(){
     localStorage.removeItem("classCode");
     localStorage.removeItem("days");
     localStorage.removeItem("multipleDoOutput");
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let navItems = document.querySelectorAll(".nav-item");
+
+    if (navItems.length > 0) {
+
+        navItems.forEach(function (item) {
+
+            item.addEventListener("click", function () {
+
+                localStorage.clear();
+
+            });
+
+        });
+
+    }
+
 });

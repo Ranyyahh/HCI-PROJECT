@@ -266,3 +266,25 @@ document.getElementById("resetAge").addEventListener("click", function(){
     localStorage.removeItem("ageOutput");
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let navItems = document.querySelectorAll(".nav-item");
+
+    if (navItems.length > 0) {
+
+        navItems.forEach(function (item) {
+
+            item.addEventListener("click", function () {
+
+                // CLEAR ALL LOCAL STORAGE
+                localStorage.clear();
+
+            });
+
+        });
+
+    }
+
+});

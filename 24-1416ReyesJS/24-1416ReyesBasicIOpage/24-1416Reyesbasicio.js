@@ -241,3 +241,23 @@ document.getElementById("resetMultiply").addEventListener("click", function(){
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    let navItems = document.querySelectorAll(".nav-item");
+
+    if (navItems.length > 0) {
+
+        navItems.forEach(function (item) {
+
+            item.addEventListener("click", function () {
+
+                // CLEAR ALL LOCAL STORAGE
+                localStorage.clear();
+
+            });
+
+        });
+
+    }
+
+});

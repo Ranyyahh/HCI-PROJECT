@@ -187,30 +187,90 @@ body {
     margin-left: 100px;
 }
 
+#sample1 .section-label {
+    margin-top: 40px;
+}
+#sample1 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
+}
+
+#stringForm label:not(.section-label){
+    font-size: 20px;
+    margin-left: 160px;
+    margin-bottom: 10px;
+}
+
+#stringInput {
+    font-size: 20px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 125px;
+    margin-bottom: 10px;
+}
 #sample1 .add-btn {
     display: block;
     margin-left: 125px;
-    margin-top: -15px;
-    padding: 12px 87px;
+    margin-top: -25px;
+    padding: 10px 87px;
     border-radius: 8px;
+}
+
+#sample2 .section-label {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-top: 40px;
+    margin-bottom: -40px;
+    margin-left: 110px;       
+}
+
+#integerForm label:not(.section-label) {
+    font-size: 25px;
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
+
+#birthYearInput {
+    font-size: 20px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-bottom: 10px;
 }
 
 #sample2 .add-btn {
     display: block;
-    margin-left: 145px;
-    margin-top: -15px;
-    padding: 12px 92px;
+    margin-left: 150px;
+    margin-top: -25px;
+    padding: 10px 60px;
     border-radius: 8px;
 }
 
 #sample3 .sample-left label:not(.section-label) {
     font-size: 23px;  
     font-weight: normal;
+    margin-top: 40px;
 }
 
-#num1Input {
+#grade1Input {
     font-size: 20px;
-    height: 37px;
+    height: 40px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#grade2Input {
+    font-size: 20px;
+    height: 40px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#grade3Input {
+    font-size: 20px;
+    height: 40px;
     margin-left: 5px;
     margin-bottom: 10px;
 }
@@ -220,64 +280,112 @@ body {
     font-size: 25px;
     display: block;
     text-align: center;   
-    margin-top: 40px;
-    margin-bottom: -40px;
+    margin-top: 70px;
+    margin-bottom:10px;
     margin-left: 100px;       
 }
 
 #sample3 .add-btn {
      display: block;
-    margin-left: 117px;
+    margin-left: 100px;
     margin-top: -20px;
-    padding: 12px 105px;
+    padding: 10px 45px;
     border-radius: 8px;
 }
 
+#sample3 .output-box {
+    height: 120px;
+}
+
+#booleanForm .section-label {
+     font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-top: 40px;
+    margin-bottom: -40px;
+    margin-left: 110px;       
+}
 
 #sample4 .sample-left label:not(.section-label) {
     font-size: 23px;  
     font-weight: normal;
+    margin-left: 170px;
 }
 
-#heightInput {
-     font-size: 20px;
-    height: 37px;
-    margin-left: 10px;
+
+#passwordInput {
+   font-size: 20px;
+    height: 40px;
+    margin-left: 140px;
+    margin-bottom: 10px;
     margin-top: 10px;
 }
 
 #sample4 .add-btn {
     display: block;
-    margin-left: 135px;
+    margin-left: 170px;
     margin-top: -20px;
-    padding: 12px 80px;
+    padding: 8px 20px;
     border-radius: 8px;
+}
+
+#sample4 .sample-middle label {
+    margin-top: 10px;          
+    margin-left: 100px;        
+}
+
+#sample4 .output-box {
+    height: 150px;
+}
+
+#multiTypeForm .section-label {
+     font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 110px;        
 }
 
 #sample5 .sample-left label:not(.section-label) {
     font-size: 23px;  
     font-weight: normal;
+     margin-top: 30px;
+     margin-left: 140px;
 }
 
-#mul1Input {
-    font-size: 20px;
-    height: 37px;
-    margin-left: 15px;
+#studentNameInput {
+     font-size: 20px;
+    height: 40px;
+    margin-left: 135px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-#mul2Input {
-    font-size: 20px;
-    height: 37px;
-    margin-left: 10px;
-    margin-top: 10px;
+#studentAgeInput {
+     font-size: 20px;
+    height: 40px;
+    margin-left: 135px;
+    margin-top: 0px;
 }
 
 #sample5 .add-btn {
     display: block;
-    margin-left: 125px;
-    margin-top: -20px;
-    padding: 9px 90px;
+    margin-left: 135px;
+    margin-top: 20px;
+    padding: 9px 67px;
     border-radius: 8px;
+}
+
+#sample5 .sample-middle label {
+    margin-top: 10px;          
+    margin-left: 100px;        
+}
+
+#sample5 .output-box {
+    height: 150px;
 }
 
 .sample-left,
@@ -299,7 +407,7 @@ body {
     margin-top: 30px;
     font-weight: bold;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 25px;
     margin-left: 110px;
 }
@@ -331,17 +439,17 @@ body {
     transform: scale(1.05);
 }
 
+
+
 .output-box {
     width:70%;
-     min-height: 80px;     
+    height: 100px;     
     font-size: 15px;       
     padding: 15px;
-
+   
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;
-
-    font-size: 25px;
     font-weight: bold;
     color: #000000;
 
@@ -384,7 +492,7 @@ body {
 .reset-btn {
     display: block;
     margin-left: 0px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 12px 135px;
     border-radius: 8px;
     cursor: pointer;

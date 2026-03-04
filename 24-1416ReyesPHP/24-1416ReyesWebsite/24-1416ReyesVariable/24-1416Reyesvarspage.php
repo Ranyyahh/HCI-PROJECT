@@ -1,18 +1,18 @@
 <?php
 session_start();
-$currentPage = "basic_io";
+$currentPage = "variables";
 
 if(!isset($_SESSION['current_page'])){
     $_SESSION['current_page'] = $currentPage;
 }
 
 if($_SESSION['current_page'] !== $currentPage){
-    unset($_SESSION['basic_io']);
+    unset($_SESSION['variables']);
     $_SESSION['current_page'] = $currentPage;
 }
 
-if(!isset($_SESSION['basic_io'])){
-    $_SESSION['basic_io'] = [];
+if(!isset($_SESSION['variables'])){
+    $_SESSION['variables'] = [];
 }
 ?>
 
@@ -52,232 +52,173 @@ if(!isset($_SESSION['basic_io'])){
     • Data Type: This defines the type or kind of data that a variable can hold. It can be a number, text, boolean, string, etc.
     </p>
 
-    <!-- SAMPLE 1 -->
-     <div class="sample-header">
-    Sample 1 - <span>Reverse Conversion</span>
+  <!-- SAMPLE 1 - String Variable: Name Processor -->
+<div class="sample-header">
+    Sample 1 - <span>String Variable: Name Processor</span>
 </div>
-    <div id="sample1" class="sample-box">
+<div id="sample1" class="sample-box">
 
     <!-- LEFT (INPUT) -->
     <div class="sample-left">
-    <form id="reverseForm">
+        <form id="stringForm">
+            <label class="section-label">Input</label>
+            <br><br>
+            <label>Enter your name:</label>
+            <input type="text" id="stringInput">
+            <br><br>
+            <button type="submit" class="add-btn">Process</button>
+        </form>
+    </div>
 
-        <label class="section-label">Input</label>
-        <br><br>
-
-        <label>Enter Text:</label>
-        <input type="text" id="reverseInput">
-
-        <br><br>
-
-        <button type="submit" class="add-btn">Reverse</button>
-
-    </form>
-</div>
-
-<!-- MIDDLE (OUTPUT) -->
-<div class="sample-middle">
-    <label>Output</label>
-    <div class="output-box" id="reverseOutput"></div>
-    <button type="button" class="reset-btn" id="resetReverse">Reset</button>
-</div>
+    <!-- MIDDLE (OUTPUT) -->
+    <div class="sample-middle">
+        <label>Output</label>
+        <div class="output-box" id="stringOutput"></div>
+        <button type="button" class="reset-btn" id="resetString">Reset</button>
+    </div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">
         <h4>Description</h4>
-        <p>This example shows how to reverse a string input by a user.</p>
+        <p>This example demonstrates STRING variables. It shows how text data is processed - original text, uppercase conversion, and character count.</p>
     </div>
-
 </div>
 
-
-   <!-- SAMPLE 2 -->
+<!-- SAMPLE 2 - Integer Variable: Age Calculator -->
 <div class="sample-header">
-    Sample 2 - <span>Name Greeting</span>
+    Sample 2 - <span>Integer Variable: Age Calculator</span>
 </div>
-
 <div id="sample2" class="sample-box">
 
     <!-- LEFT (INPUT) -->
     <div class="sample-left">
-        <form id="greetForm">
-
+        <form id="integerForm">
             <label class="section-label">Input</label>
             <br><br>
-
-            <label>Enter Name:</label>
-            <input type="text" id="nameInput">
-
+            <label>Enter your birth year:</label>
+            <input type="number" id="birthYearInput">
             <br><br>
-
-            <button type="submit" class="add-btn">Submit</button>
-
+            <button type="submit" class="add-btn">Calculate Age</button>
         </form>
     </div>
 
     <!-- MIDDLE (OUTPUT) -->
-   <div class="sample-middle">
-    <label>Output</label>
-    <div class="output-box" id="greetOutput"></div>
-    <button type="button" class="reset-btn" id="resetGreet">Reset</button>
-</div>
-  <!-- RIGHT (DESCRIPTION) -->
-        <div class="sample-right">
-        <h4>Description</h4>
-        <p>
-            This example shows the process of greeting the user by their name. 
-        </p>
+    <div class="sample-middle">
+        <label>Output</label>
+        <div class="output-box" id="integerOutput"></div>
+        <button type="button" class="reset-btn" id="resetInteger">Reset</button>
     </div>
 
+    <!-- RIGHT (DESCRIPTION) -->
+    <div class="sample-right">
+        <h4>Description</h4>
+        <p>This example demonstrates INTEGER variables. It shows how whole numbers are used in calculations - birth year, current year, and age computation.</p>
+    </div>
 </div>
 
-
-
- <!-- SAMPLE 3 -->
+<!-- SAMPLE 3 - Float Variable: Grade Average -->
 <div class="sample-header">
-    Sample 3 - <span>Sum of Two Numbers</span>
+    Sample 3 - <span>Float Variable: Grade Average</span>
 </div>
-
 <div id="sample3" class="sample-box">
 
     <!-- LEFT (INPUT) -->
     <div class="sample-left">
-        <form id="sumForm">
-
+        <form id="floatForm">
             <label class="section-label">Input</label>
-            <br><br>
-
-            <label>Number 1:</label>
-            <input type="number" id="num1Input">
-
+            <label>Grade 1:</label>
+            <input type="number" id="grade1Input" step="0.01" >
             <br>
-
-            <label>Number 2:</label>
-            <input type="number" id="num2Input">
-
+            <label>Grade 2:</label>
+            <input type="number" id="grade2Input" step="0.01" >
+            <br>
+            <label>Grade 3:</label>
+            <input type="number" id="grade3Input" step="0.01" >
             <br><br>
-
-            <button type="submit" class="add-btn">Add</button>
-
+            <button type="submit" class="add-btn">Compute Average</button>
         </form>
     </div>
 
-  <div class="sample-middle">
-    <label>Output</label>
-    <div class="output-box" id="sumOutput"></div>
-    <button type="button" class="reset-btn" id="resetSum">Reset</button>
-</div>
+    <!-- MIDDLE (OUTPUT) -->
+    <div class="sample-middle">
+        <label>Output</label>
+        <div class="output-box" id="floatOutput"></div>
+        <button type="button" class="reset-btn" id="resetFloat">Reset</button>
+    </div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">
         <h4>Description</h4>
-        <p>
-            This example shows the process of adding two numbers input by the user.
-            The system will compute and display their sum.
-        </p>
+        <p>This example demonstrates FLOAT variables. It shows how decimal numbers are processed and averaged with precise calculations.</p>
     </div>
-
 </div>
 
 
-   <!-- SAMPLE 4 -->
+<!-- SAMPLE 4 - Boolean Variable: Password Check -->
 <div class="sample-header">
-    Sample 4 - <span>BMI Calculator</span>
+    Sample 4 - <span>Boolean Variable: Password Check</span>
 </div>
-
 <div id="sample4" class="sample-box">
 
     <!-- LEFT (INPUT) -->
     <div class="sample-left">
-        <form id="bmiForm">
-
+        <form id="booleanForm">
             <label class="section-label">Input</label>
             <br><br>
-
-            <label>Weight (kg):</label>
-            <input type="number" id="weightInput">
-
-            <br>
-
-            <label>Height (m):</label>
-            <input type="number" id="heightInput">
-
+            <label>Enter password:</label>
+            <input type="password" id="passwordInput" >
             <br><br>
-
-            <button type="submit" class="add-btn">Calculate</button>
-
+            <button type="submit" class="add-btn">Check Password</button>
         </form>
     </div>
 
     <!-- MIDDLE (OUTPUT) -->
     <div class="sample-middle">
-    <label>Output</label>
-    <div class="output-box" id="bmiOutput"></div>
-    <button type="button" class="reset-btn" id="resetBmi">Reset</button>
-</div>
+        <label>Output</label>
+        <div class="output-box" id="booleanOutput"></div>
+        <button type="button" class="reset-btn" id="resetBoolean">Reset</button>
+    </div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">
         <h4>Description</h4>
-        <p>
-            This example shows the process of calculating the Body Mass Index (BMI) 
-            based on the height and weight input by the user.
-            The system will compute and display the BMI result and category.
-        </p>
+        <p>This example demonstrates BOOLEAN variables. It shows how true/false values work in conditional statements and access control.</p>
     </div>
-
 </div>
 
- <!-- SAMPLE 5 -->
+<!-- SAMPLE 5 - Multiple Data Types: Student Information -->
 <div class="sample-header">
-    Sample 5 - <span>Product of Two Numbers</span>
+    Sample 5 - <span>Multiple Data Types: Student Info</span>
 </div>
-
 <div id="sample5" class="sample-box">
 
     <!-- LEFT (INPUT) -->
     <div class="sample-left">
-        <form id="multiplyForm">
-
+        <form id="multiTypeForm">
             <label class="section-label">Input</label>
-            <br><br>
-
-            <label>Number 1:</label>
-            <input type="number" id="mul1Input">
-
+            <label>Student Name:</label>
+            <input type="text" id="studentNameInput">
             <br>
-
-            <label>Number 2:</label>
-            <input type="number" id="mul2Input">
-
-            <br><br>
-
-            <button type="submit" class="add-btn">Multiply</button>
-
+            <label>Age:</label>
+            <input type="number" id="studentAgeInput" >
+            <br>
+            <button type="submit" class="add-btn">Process Info</button>
         </form>
     </div>
 
     <!-- MIDDLE (OUTPUT) -->
     <div class="sample-middle">
-    <label>Output</label>
-    <div class="output-box" id="multiplyOutput"></div>
-    <button type="button" class="reset-btn" id="resetMultiply">Reset</button>
-</div>
+        <label>Output</label>
+        <div class="output-box" id="multiTypeOutput"></div>
+        <button type="button" class="reset-btn" id="resetMultiType">Reset</button>
+    </div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">
         <h4>Description</h4>
-        <p>
-            This example shows the process of multiplying two numbers 
-            input by the user. The system will compute and display 
-            their product.
-        </p>
+        <p>This example combines MULTIPLE DATA TYPES. It shows how String, Integer, Float, and Boolean variables work together in one program.</p>
     </div>
-
 </div>
-
-
-</div>
-<script src="../../../24-1416ReyesJS/24-1416ReyesBasicIOpage/24-1416Reyesvars.js"></script>
+<script src="../../../24-1416ReyesJS/24-1416ReyesVarspage/24-1416Reyesvars.js"></script>
     </body>
 </html>

@@ -5,6 +5,11 @@ if(isset($_POST['customerName']) && isset($_POST['classCode']) && isset($_POST['
     $classCode = intval($_POST['classCode']);
     $days = intval($_POST['days']);
 
+    if($classCode < 1 || $classCode > 3) {
+        echo "Invalid Class Code!";
+        exit();
+    }
+
     switch($classCode){
         case 1:
             $classification = "SINGLE SUITE";
@@ -21,14 +26,10 @@ if(isset($_POST['customerName']) && isset($_POST['classCode']) && isset($_POST['
             $rec_fee = 2000;
             $rate = 3000;
             break;
-        default:
-            echo "Invalid Class Code!";
-            exit();
     }
 
-    $total = ($days * $rate) + $rec_fee;
+    $total = ($rate * $days) + $rec_fee;
 
-    echo "Customer: $name | Class: $classification | Total Bill: " 
-         . number_format($total,2);
+    echo "Customer: $name | Class: $classification | Total Bill: ₱" . number_format($total,2);
 }
 ?>
