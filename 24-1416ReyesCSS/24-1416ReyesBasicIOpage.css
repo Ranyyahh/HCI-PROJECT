@@ -147,6 +147,7 @@ body {
     border: 2px solid #2f4f7f;
     border-radius: 10px;
     margin-bottom: 40px;
+    
 }
 
 .sample-left {
@@ -177,6 +178,29 @@ body {
     cursor: pointer;
 }
 
+.section-label {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-bottom: -40px;
+}
+
+#sample1 .add-btn {
+    display: block;
+    margin-left: 125px;
+    margin-top: -15px;
+    padding: 12px 87px;
+    border-radius: 8px;
+}
+
+#sample2 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: 25px;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
 
 #sample3 .input-row {
     display: flex;
@@ -267,6 +291,29 @@ body {
 }
 
 
+.sample-left,
+.sample-middle,
+.sample-middle {
+    flex: 1;
+}
+
+.sample-middle input {
+    width: 85%;
+    padding: 25px;
+    font-weight: bold;
+    border-width: 2px;
+    font-size: 25px;
+     margin-left: -50px;
+}
+
+.sample-middle label {
+    margin-top: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 25px;
+    margin-left: 80px;
+}
 
 #sample5 .input-row {
     display: flex;
@@ -315,6 +362,7 @@ body {
     font-weight: bold;
     margin-right: 20px;
 }
+
 
 .back-btn {
     margin-top: 270px;     
