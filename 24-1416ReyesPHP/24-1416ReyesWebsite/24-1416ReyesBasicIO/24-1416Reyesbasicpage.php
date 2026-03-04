@@ -79,6 +79,7 @@ if(!isset($_SESSION['basic_io'])){
 <div class="sample-middle">
     <label>Output</label>
     <div class="output-box" id="reverseOutput"></div>
+    <button type="button" class="reset-btn" id="resetReverse">Reset</button>
 </div>
 
     <!-- RIGHT (DESCRIPTION) -->
@@ -114,11 +115,11 @@ if(!isset($_SESSION['basic_io'])){
         </form>
     </div>
 
-    <!-- MIDDLE (OUTPUT) -->
-    <div class="sample-middle">
-        <label>Output</label>
-        <div class="output-box" id="greetOutput"></div>
-    </div>
+   <div class="sample-middle">
+    <label>Output</label>
+    <div class="output-box" id="greetOutput"></div>
+    <button type="button" class="reset-btn" id="resetGreet">Reset</button>
+</div>
 
         <div class="sample-right">
         <h4>Description</h4>
@@ -160,11 +161,11 @@ if(!isset($_SESSION['basic_io'])){
         </form>
     </div>
 
-    <!-- MIDDLE (OUTPUT) -->
-    <div class="sample-middle">
-        <label>Output</label>
-        <div class="output-box" id="sumOutput"></div>
-    </div>
+  <div class="sample-middle">
+    <label>Output</label>
+    <div class="output-box" id="sumOutput"></div>
+    <button type="button" class="reset-btn" id="resetSum">Reset</button>
+</div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">
@@ -209,9 +210,10 @@ if(!isset($_SESSION['basic_io'])){
 
     <!-- MIDDLE (OUTPUT) -->
     <div class="sample-middle">
-        <label>Output</label>
-        <div class="output-box" id="bmiOutput"></div>
-    </div>
+    <label>Output</label>
+    <div class="output-box" id="bmiOutput"></div>
+    <button type="button" class="reset-btn" id="resetBmi">Reset</button>
+</div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">
@@ -256,9 +258,10 @@ if(!isset($_SESSION['basic_io'])){
 
     <!-- MIDDLE (OUTPUT) -->
     <div class="sample-middle">
-        <label>Output</label>
-        <div class="output-box" id="multiplyOutput"></div>
-    </div>
+    <label>Output</label>
+    <div class="output-box" id="multiplyOutput"></div>
+    <button type="button" class="reset-btn" id="resetMultiply">Reset</button>
+</div>
 
     <!-- RIGHT (DESCRIPTION) -->
     <div class="sample-right">

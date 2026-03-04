@@ -325,11 +325,17 @@ body {
 
 
 
+.add-btn:hover {
+    background-color: #0e2d51;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 .output-box {
     width:70%;
-    min-height: 45px;
-    padding: 12px 15px;
-    margin-top: 15px;
+     min-height: 80px;     
+    font-size: 15px;       
+    padding: 15px;
 
     background-color: #ffffff;
     border: 2px solid #000000;
@@ -374,4 +380,18 @@ body {
     object-fit: contain;
 }
 
+
+.reset-btn {
+    display: block;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 12px 135px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.reset-btn:hover {
+    background-color: #0e2d51;
+}
 

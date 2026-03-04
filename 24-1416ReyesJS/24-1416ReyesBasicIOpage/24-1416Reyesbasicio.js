@@ -211,5 +211,54 @@ window.addEventListener("load", function(){
 });
 
 
+/* =========================
+   RESET BUTTONS
+========================= */
+
+// Sample 1
+document.getElementById("resetReverse").addEventListener("click", function(){
+    document.getElementById("reverseInput").value = "";
+    document.getElementById("reverseOutput").textContent = "";
+    localStorage.removeItem("reverseInput");
+    localStorage.removeItem("reverseOutput");
+});
+
+// Sample 2
+document.getElementById("resetGreet").addEventListener("click", function(){
+    document.getElementById("nameInput").value = "";
+    document.getElementById("greetOutput").textContent = "";
+    localStorage.removeItem("nameInput");
+    localStorage.removeItem("greetOutput");
+});
+
+// Sample 3
+document.getElementById("resetSum").addEventListener("click", function(){
+    document.getElementById("num1Input").value = "";
+    document.getElementById("num2Input").value = "";
+    document.getElementById("sumOutput").textContent = "";
+    localStorage.removeItem("num1Input");
+    localStorage.removeItem("num2Input");
+    localStorage.removeItem("sumOutput");
+});
+
+// Sample 4
+document.getElementById("resetBmi").addEventListener("click", function(){
+    document.getElementById("weightInput").value = "";
+    document.getElementById("heightInput").value = "";
+    document.getElementById("bmiOutput").textContent = "";
+    localStorage.removeItem("weightInput");
+    localStorage.removeItem("heightInput");
+    localStorage.removeItem("bmiOutput");
+});
+
+// Sample 5
+document.getElementById("resetMultiply").addEventListener("click", function(){
+    document.getElementById("mul1Input").value = "";
+    document.getElementById("mul2Input").value = "";
+    document.getElementById("multiplyOutput").textContent = "";
+    localStorage.removeItem("mul1Input");
+    localStorage.removeItem("mul2Input");
+    localStorage.removeItem("multiplyOutput");
+});
 
 
