@@ -18,8 +18,8 @@ if(!isset($_SESSION['basic_io'])){
 
 <html>
 <head>
-    <title>Basic Input and Output</title>
- <link rel="stylesheet" href="../../../24-1416ReyesCSS/24-1416ReyesBasicIOpage.css">
+    <title>Variables and Data Types</title>
+ <link rel="stylesheet" href="../../../24-1416ReyesCSS/24-1416ReyesVariablepage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -36,20 +36,20 @@ if(!isset($_SESSION['basic_io'])){
     <div class="sidebar">
         <div class="nav-title">NAVIGATION</div>
 
-        <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
-        <a href="../24-1416ReyesVariable/24-1416Reyesvarspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
+        <a href="../24-1416ReyesBasicIO/24-1416Reyesbasicpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
+        <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
         <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
-        <a href="../24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
+        <a href="24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
         <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
    <div class="main-content">
 
-    <h1 class="page-title">Basic Input/Output</h1>
-    <p class="page-desc">Basic Input/Output in Fundamentals of Programming refers to the process of asking the user to input a data or information and the computer will process and display an associated result.</p>
-    <p class="supporting-desc">• User Input: This is the data or information that the user will provide or input. It can be in the form of texts, numbers, etc.<br>
-    • Output: This is the associated result that the computer will display. It can be in the form of texts, numbers, etc.
+    <h1 class="page-title">Variables and Data Types</h1>
+    <p class="page-desc">Variables and Data Types in Fundamentals of Programming refers to how the data is stored and organized inside the program.</p>
+    <p class="supporting-desc">• Variable: This is a container used to store data or information. <br>
+    • Data Type: This defines the type or kind of data that a variable can hold. It can be a number, text, boolean, string, etc.
     </p>
 
     <!-- SAMPLE 1 -->
@@ -278,6 +278,6 @@ if(!isset($_SESSION['basic_io'])){
 
 
 </div>
-<script src="../../../24-1416ReyesJS/24-1416ReyesBasicIOpage/24-1416Reyesbasicio.js"></script>
+<script src="../../../24-1416ReyesJS/24-1416ReyesBasicIOpage/24-1416Reyesvars.js"></script>
     </body>
 </html>

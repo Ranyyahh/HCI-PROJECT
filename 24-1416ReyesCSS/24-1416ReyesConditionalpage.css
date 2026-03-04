@@ -1,0 +1,428 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    user-select: none;
+}
+
+.bar {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 0 15px;               
+    box-sizing: border-box;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background: #0e2d51;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;                
+}
+
+.header-text {
+    font-family: 'Dm Sans', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;  
+    margin-left: 15px;           
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 350px;
+    height: calc(100vh - 60px); 
+    position: fixed;
+    top: 75px;                
+    padding-top: 10px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 0% 0%, #142754, #6687d4);
+}
+
+.box-img {
+    width: 50px;     
+    height: 70px;
+    object-fit: contain;
+}
+
+.nav-title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    padding: 12px 0;
+    background: #2d4777;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+
+.nav-item {
+    display: flex;             
+    align-items: center;       
+    gap: 10px;                 
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.nav-item.active {
+    background: #6d8fc4;
+    font-weight: bold;
+}
+
+
+.main-content {
+    margin-left: 350px;   
+    margin-top: 75px;    
+    padding: 30px 40px;   
+    width: calc(100% - 350px);
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: #2f4f7f;
+    margin-top: 0;            
+    margin-bottom: 5px;
+}
+
+
+.page-desc {
+    color: #2f4f7f;
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.supporting-desc{
+    color: #2f4f7f;
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+.sample-header {
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+    color: #2f4f7f;
+    margin-bottom: 8px;
+     margin-left: 100px; 
+}
+
+.sample-header span {
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+.sample-box {
+    width: 100%;
+    height: 300px;  
+    background: #ffffff;
+    display: flex; 
+    border: 2px solid #2f4f7f;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    
+}
+
+.sample-left {
+    flex: 0.8;
+    padding: 20px;
+     margin-bottom: 50px;
+     margin-right: 100px;
+    align-content: center;
+    align-items: center;
+     display: flex;
+    flex-direction: column;   
+    font-size: 25px;
+    justify-content: center 
+}
+
+.sample-left input[type="text"],
+.sample-left input[type="number"] {
+    font-size: 20px;
+    padding: 5px 15px;
+    width: 250px;    
+    border-radius: 6px;
+}
+
+.sample-left button {
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.section-label {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-bottom: -40px;
+    margin-left: 100px;
+}
+
+#letterGradeForm label:not(.section-label) {
+    margin-left: 120px;;
+}
+
+#letterGradeInput {
+    font-size: 20px;
+    height: 37px;
+    margin-left: 120px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#sample1 .add-btn {
+    display: block;
+    margin-left: 125px;
+    margin-top: -15px;
+    padding: 12px 87px;
+    border-radius: 8px;
+}
+
+#sample2 .section-label {
+    margin-left: 140px;   
+}
+
+#sample2 .add-btn {
+    display: block;
+    margin-left: 150px;
+    margin-top: -15px;
+    padding: 12px 92px;
+    border-radius: 8px;
+}
+
+#numberForm label:not(.section-label) {
+    margin-left: 170px;
+}
+
+#sample3 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
+}
+
+#numberInput {
+    font-size: 20px;
+    height: 37px;
+    width:270px;
+    margin-left: 120px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#sample3 .section-label {
+     font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-top: 40px;
+    margin-bottom: -40px;
+    margin-left: 100px;       
+}
+
+#sample3 .add-btn {
+     display: block;
+    margin-left: 117px;
+    margin-top: -20px;
+    padding: 12px 105px;
+    border-radius: 8px;
+}
+
+
+#sample4 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
+}
+
+#evenOddForm label:not(.section-label) {
+     margin-left: 170px;
+}
+
+#evenOddInput {
+    font-size: 20px;
+    height: 37px;
+    width:270px;
+    margin-left: 120px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#sample4 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: -20px;
+    padding: 12px 105px;
+    border-radius: 8px;
+}
+
+
+#ageForm label:not(.section-label) {
+    margin-left: 170px;
+}
+
+#sample5 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
+}
+
+#ageInput {
+ font-size: 20px;
+    height: 37px;
+    width:270px;
+    margin-left: 120px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+
+#sample5 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: -20px;
+    padding: 9px 105px;
+    border-radius: 8px;
+}
+
+.sample-left,
+.sample-middle,
+.sample-middle {
+    flex: 1;
+}
+
+.sample-middle input {
+    width: 85%;
+    padding: 25px;
+    font-weight: bold;
+    border-width: 2px;
+    font-size: 25px;
+     margin-left: -50px;
+}
+
+.sample-middle label {
+    margin-top: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 25px;
+    margin-left: 110px;
+}
+
+.sample-right {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 23px;
+    margin-bottom: 90px;
+    align-content: center;
+    align-items: center;
+     display: flex;
+    flex-direction: column;   
+    justify-content: center  
+}
+
+.sample-right h4 {
+    margin-bottom: -10px;  
+    margin-top: 50;
+    font-size: 25px;     
+}
+
+
+
+.add-btn:hover {
+    background-color: #0e2d51;
+    color: white; 
+    transform: scale(1.05);
+}
+
+.output-box {
+    width:70%;
+     min-height: 80px;     
+    font-size: 15px;       
+    padding: 15px;
+
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+.back-btn {
+    margin-top: 270px;     
+    margin-bottom: 20px;
+    align-self: center;
+    display:  flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #c8d7ed;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2f4f7f;
+    transition: 0.3s ease;
+    margin-left: 47px;
+    width: 200px;
+}
+
+.back-btn:hover {
+    background: #a9bbd4;
+}
+
+.back-icon {
+    width: 50px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+.reset-btn {
+    display: block;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 12px 135px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.reset-btn:hover {
+    background-color: #0e2d51;
+     color: white; 
+}
+

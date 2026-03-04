@@ -194,7 +194,7 @@ window.addEventListener("load", function(){
 
 // Reset buttons
 
-// Sample 1
+// reverse
 document.getElementById("resetReverse").addEventListener("click", function(){
     document.getElementById("reverseInput").value = "";
     document.getElementById("reverseOutput").textContent = "";
@@ -202,7 +202,7 @@ document.getElementById("resetReverse").addEventListener("click", function(){
     localStorage.removeItem("reverseOutput");
 });
 
-// Sample 2
+// name ggreeting
 document.getElementById("resetGreet").addEventListener("click", function(){
     document.getElementById("nameInput").value = "";
     document.getElementById("greetOutput").textContent = "";
@@ -210,7 +210,7 @@ document.getElementById("resetGreet").addEventListener("click", function(){
     localStorage.removeItem("greetOutput");
 });
 
-// Sample 3
+// sum of two numbers
 document.getElementById("resetSum").addEventListener("click", function(){
     document.getElementById("num1Input").value = "";
     document.getElementById("num2Input").value = "";
@@ -220,7 +220,7 @@ document.getElementById("resetSum").addEventListener("click", function(){
     localStorage.removeItem("sumOutput");
 });
 
-// Sample 4
+// bmi calculator
 document.getElementById("resetBmi").addEventListener("click", function(){
     document.getElementById("weightInput").value = "";
     document.getElementById("heightInput").value = "";
@@ -230,7 +230,7 @@ document.getElementById("resetBmi").addEventListener("click", function(){
     localStorage.removeItem("bmiOutput");
 });
 
-// Sample 5
+// multiply two numbers
 document.getElementById("resetMultiply").addEventListener("click", function(){
     document.getElementById("mul1Input").value = "";
     document.getElementById("mul2Input").value = "";
