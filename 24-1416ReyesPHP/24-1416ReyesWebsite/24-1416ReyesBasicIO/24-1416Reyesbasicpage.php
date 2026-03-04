@@ -46,7 +46,7 @@ if(isset($_POST['mul1']) && isset($_POST['mul2'])){
 <html>
 <head>
     <title>Basic Input and Output</title>
- <link rel="stylesheet" href="../24-1416ReyesCSS/24-1416ReyesBasicIOpage.css">
+ <link rel="stylesheet" href="../../../24-1416ReyesCSS/24-1416ReyesBasicIOpage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -63,11 +63,11 @@ if(isset($_POST['mul1']) && isset($_POST['mul2'])){
     <div class="sidebar">
         <div class="nav-title">NAVIGATION</div>
 
-        <a href="#" class="nav-item active"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
-        <a href="24-1416Reyesvarspage.php" class="nav-item"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
-        <a href="24-1416Reyesconditionalpage.php" class="nav-item"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
-        <a href="24-1416Reyesloopspage.php" class="nav-item"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
-        <a href="24-1416ReyesWelcomepage.php" class="back-btn"><img src="../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
+        <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
+        <a href="24-1416Reyesvarspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
+        <a href="24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
+        <a href="24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
+        <a href="24-1416ReyesWelcomepage.php" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
