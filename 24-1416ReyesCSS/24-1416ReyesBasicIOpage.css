@@ -327,8 +327,8 @@ body {
 
 .add-btn:hover {
     background-color: #0e2d51;
+    color: white; 
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .output-box {
@@ -393,5 +393,6 @@ body {
 
 .reset-btn:hover {
     background-color: #0e2d51;
+     color: white; 
 }
 

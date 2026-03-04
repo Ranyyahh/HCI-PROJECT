@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-/* AUTO RESET WHEN LEAVING PAGE */
-
 $currentPage = "basic_io";
 
 if(!isset($_SESSION['current_page'])){
@@ -14,7 +11,6 @@ if($_SESSION['current_page'] !== $currentPage){
     $_SESSION['current_page'] = $currentPage;
 }
 
-/* INITIALIZE ARRAY */
 if(!isset($_SESSION['basic_io'])){
     $_SESSION['basic_io'] = [];
 }
@@ -76,6 +72,7 @@ if(!isset($_SESSION['basic_io'])){
     </form>
 </div>
 
+<!-- MIDDLE (OUTPUT) -->
 <div class="sample-middle">
     <label>Output</label>
     <div class="output-box" id="reverseOutput"></div>
@@ -115,12 +112,13 @@ if(!isset($_SESSION['basic_io'])){
         </form>
     </div>
 
+    <!-- MIDDLE (OUTPUT) -->
    <div class="sample-middle">
     <label>Output</label>
     <div class="output-box" id="greetOutput"></div>
     <button type="button" class="reset-btn" id="resetGreet">Reset</button>
 </div>
-
+  <!-- RIGHT (DESCRIPTION) -->
         <div class="sample-right">
         <h4>Description</h4>
         <p>

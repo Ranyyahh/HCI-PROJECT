@@ -92,6 +92,11 @@ p{
     margin-top: 10px;
 }
 
+.box:hover {
+   background-color: #0e2d51;
+    color: white;
+}
+
 .box-img {
     width: 80px;
     height: 70px;

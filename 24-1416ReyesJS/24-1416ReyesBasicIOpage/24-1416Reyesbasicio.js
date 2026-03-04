@@ -1,7 +1,5 @@
-/* =========================
-   SAMPLE 1 - REVERSE
-========================= */
 
+// Reverse
 document.getElementById("reverseForm").addEventListener("submit", function(e) {
 
     e.preventDefault();
@@ -19,8 +17,6 @@ document.getElementById("reverseForm").addEventListener("submit", function(e) {
     .then(data => {
 
         document.getElementById("reverseOutput").textContent = data;
-
-        // SAVE to localStorage
         localStorage.setItem("reverseInput", text);
         localStorage.setItem("reverseOutput", data);
 
@@ -29,9 +25,7 @@ document.getElementById("reverseForm").addEventListener("submit", function(e) {
 });
 
 
-/* =========================
-   SAMPLE 2 - GREETING
-========================= */
+// Name Greeting
 
 document.getElementById("greetForm").addEventListener("submit", function(e) {
 
@@ -50,8 +44,6 @@ document.getElementById("greetForm").addEventListener("submit", function(e) {
     .then(data => {
 
         document.getElementById("greetOutput").textContent = data;
-
-        // SAVE to localStorage
         localStorage.setItem("nameInput", name);
         localStorage.setItem("greetOutput", data);
 
@@ -60,9 +52,7 @@ document.getElementById("greetForm").addEventListener("submit", function(e) {
 });
 
 
-/* =========================
-   SAMPLE 3 - SUM
-========================= */
+// Sum of Two Numbers
 
 document.getElementById("sumForm").addEventListener("submit", function(e){
 
@@ -83,8 +73,6 @@ document.getElementById("sumForm").addEventListener("submit", function(e){
     .then(data => {
 
         document.getElementById("sumOutput").textContent = data;
-
-        // SAVE to localStorage
         localStorage.setItem("num1Input", num1);
         localStorage.setItem("num2Input", num2);
         localStorage.setItem("sumOutput", data);
@@ -93,9 +81,7 @@ document.getElementById("sumForm").addEventListener("submit", function(e){
 
 });
 
-/* =========================
-   SAMPLE 4 - BMI
-========================= */
+// BMI Calculator
 
 document.getElementById("bmiForm").addEventListener("submit", function(e){
 
@@ -116,8 +102,6 @@ document.getElementById("bmiForm").addEventListener("submit", function(e){
     .then(data => {
 
         document.getElementById("bmiOutput").textContent = data;
-
-        // Save to localStorage
         localStorage.setItem("weightInput", weight);
         localStorage.setItem("heightInput", height);
         localStorage.setItem("bmiOutput", data);
@@ -126,9 +110,7 @@ document.getElementById("bmiForm").addEventListener("submit", function(e){
 });
 
 
- /* =========================
-   SAMPLE 5 - MULTIPLY
-========================= */
+//Multiply Two Numbers
 
 document.getElementById("multiplyForm").addEventListener("submit", function(e){
 
@@ -158,10 +140,8 @@ document.getElementById("multiplyForm").addEventListener("submit", function(e){
 
 });
 
-/* =========================
-   RESTORE DATA ON RELOAD
-========================= */
 
+// Restore data from local storage on page load
 window.addEventListener("load", function(){
 
     // Sample 1
@@ -188,7 +168,7 @@ window.addEventListener("load", function(){
     document.getElementById("sumOutput").textContent =
         localStorage.getItem("sumOutput") || "";
 
-        // Sample 4
+    // Sample 4
     document.getElementById("weightInput").value =
         localStorage.getItem("weightInput") || "";
 
@@ -198,7 +178,7 @@ window.addEventListener("load", function(){
     document.getElementById("bmiOutput").textContent =
         localStorage.getItem("bmiOutput") || "";
 
-         // Sample 5
+    // Sample 5
     document.getElementById("mul1Input").value =
         localStorage.getItem("mul1Input") || "";
 
@@ -211,9 +191,8 @@ window.addEventListener("load", function(){
 });
 
 
-/* =========================
-   RESET BUTTONS
-========================= */
+
+// Reset buttons
 
 // Sample 1
 document.getElementById("resetReverse").addEventListener("click", function(){
