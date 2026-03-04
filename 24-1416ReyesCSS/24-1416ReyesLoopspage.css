@@ -1,0 +1,473 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    user-select: none;
+}
+
+.bar {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 0 15px;               
+    box-sizing: border-box;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background: #0e2d51;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;                
+}
+
+.header-text {
+    font-family: 'Dm Sans', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;  
+    margin-left: 15px;           
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 350px;
+    height: calc(100vh - 60px); 
+    position: fixed;
+    top: 75px;                
+    padding-top: 10px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at 0% 0%, #142754, #6687d4);
+}
+
+.box-img {
+    width: 50px;     
+    height: 70px;
+    object-fit: contain;
+}
+
+.nav-title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    padding: 12px 0;
+    background: #2d4777;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+
+.nav-item {
+    display: flex;             
+    align-items: center;       
+    gap: 10px;                 
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.nav-item.active {
+    background: #6d8fc4;
+    font-weight: bold;
+}
+
+
+.main-content {
+    margin-left: 350px;   
+    margin-top: 75px;    
+    padding: 30px 40px;   
+    width: calc(100% - 350px);
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    color: #2f4f7f;
+    margin-top: 0;            
+    margin-bottom: 5px;
+}
+
+
+.page-desc {
+    color: #2f4f7f;
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.supporting-desc{
+    color: #2f4f7f;
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+.sample-header {
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+    color: #2f4f7f;
+    margin-bottom: 8px;
+     margin-left: 100px; 
+}
+
+.sample-header span {
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+.sample-box {
+    width: 100%;
+    height: 300px;  
+    background: #ffffff;
+    display: flex; 
+    border: 2px solid #2f4f7f;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    
+}
+
+.sample-left {
+    flex: 0.8;
+    padding: 20px;
+     margin-bottom: 50px;
+     margin-right: 100px;
+    align-content: center;
+    align-items: center;
+     display: flex;
+    flex-direction: column;   
+    font-size: 25px;
+    justify-content: center 
+}
+
+.sample-left input[type="text"],
+.sample-left input[type="number"] {
+    font-size: 20px;
+    padding: 5px 15px;
+    width: 250px;    
+    border-radius: 6px;
+}
+
+.sample-left button {
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.section-label {
+    font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-bottom: -40px;
+    margin-left: 100px;
+}
+
+#forLoopForm label:not(.section-label) {
+    margin-left: 70px;;
+}
+
+#forLoopInput {
+    font-size: 20px;
+    height: 50px;
+    margin-left: 125px;
+    width: 260px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#sample1 .add-btn {
+    display: block;
+    margin-left: 125px;
+    margin-top: -15px;
+    padding: 10px 87px;
+    border-radius: 8px;
+}
+
+#evenForForm label:not(.section-label) {
+    margin-left: 130px;
+    font-size: 23px;
+}
+#sample2 .section-label {
+    margin-left: 120px;   
+}
+
+#evenForInput {
+     font-size: 20px;
+    height: 50px;
+    margin-left: 130px;
+    width: 270px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+#sample2 .add-btn {
+    display: block;
+    margin-left: 130px;
+    margin-top: -15px;
+    padding: 12px 92px;
+    border-radius: 8px;
+}
+
+#factorialForm label:not(.section-label) {
+    margin-left: 170px;
+}
+
+#sample3 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
+}
+
+#factorialInput {
+      font-size: 20px;
+    height: 50px;
+    margin-left: 125px;
+    width: 270px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#sample3 .section-label {
+     font-weight: bold;
+    font-size: 25px;
+    display: block;
+    text-align: center;   
+    margin-top: 10px;
+    margin-bottom: -40px;
+    margin-left: 100px;       
+}
+
+#sample3 .add-btn {
+     display: block;
+    margin-left: 125px;
+    margin-top: -20px;
+    padding: 10px 93px;
+    border-radius: 8px;
+}
+
+
+#sample4 .sample-left label:not(.section-label) {
+    font-size: 23px;  
+    font-weight: normal;
+}
+
+#reverseWhileForm label:not(.section-label) {
+     margin-left: 170px;
+}
+
+#reverseWhileInput {
+    font-size: 20px;
+    height: 40px;
+    width:280px;
+    margin-left: 120px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#sample4 .add-btn {
+    display: block;
+    margin-left: 120px;
+    margin-top: -20px;
+    padding: 10px 100px;
+    border-radius: 8px;
+}
+
+/* ===== SAMPLE 5 CLEAN FIX ===== */
+
+#billingForm label:not(.section-label){
+     font-size:20px;  
+    font-weight: normal;
+
+}
+
+#sample5 .sample-left {
+    justify-content: center;
+    font-size: 23px;
+}
+
+
+#sample5 form {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    row-gap: 15px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+
+#sample5 form br {
+    display: none;
+}
+
+
+#sample5 input[type="text"],
+#sample5 input[type="number"] {
+       font-size: 20px;
+    padding: 5px 15px;
+    width: 250px;    
+    border-radius: 6px;
+}
+
+
+#sample5 .section-label {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+#sample5 .add-btn {
+    grid-column: span 2;      
+    justify-self: center;   
+    margin-top: 10px;
+    margin-left: 180px;           
+    padding: 10px 83px;
+    border-radius: 8px;
+    text-align: center;      
+}
+
+
+.sample-left,
+.sample-middle,
+.sample-middle {
+    flex: 1;
+}
+
+.sample-middle input {
+    width: 85%;
+    padding: 25px;
+    font-weight: bold;
+    border-width: 2px;
+    font-size: 25px;
+     margin-left: -50px;
+}
+
+.sample-middle label {
+    margin-top: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 25px;
+    margin-left: 110px;
+}
+
+.sample-right {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 23px;
+    margin-bottom: 90px;
+    align-content: center;
+    align-items: center;
+     display: flex;
+    flex-direction: column;   
+    justify-content: center  
+}
+
+.sample-right h4 {
+    margin-bottom: -10px;  
+    margin-top: 50;
+    font-size: 25px;     
+}
+
+
+
+.add-btn:hover {
+    background-color: #0e2d51;
+    color: white; 
+    transform: scale(1.05);
+}
+
+.output-box {
+    width: 320px;
+    height: 80px;                
+    min-height: 80px;
+    max-height: 80px;
+
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    display: block;               
+    
+    white-space: nowrap;         
+    overflow-x: auto;             
+    overflow-y: hidden;          
+
+}
+
+.back-btn {
+    margin-top: 270px;     
+    margin-bottom: 20px;
+    align-self: center;
+    display:  flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #c8d7ed;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2f4f7f;
+    transition: 0.3s ease;
+    margin-left: 47px;
+    width: 200px;
+}
+
+.back-btn:hover {
+    background: #a9bbd4;
+}
+
+.back-icon {
+    width: 50px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+.reset-btn {
+    display: block;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 12px 135px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.reset-btn:hover {
+    background-color: #0e2d51;
+     color: white; 
+}
+

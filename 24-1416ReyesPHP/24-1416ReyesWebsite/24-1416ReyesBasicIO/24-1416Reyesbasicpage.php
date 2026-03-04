@@ -39,7 +39,7 @@ if(!isset($_SESSION['basic_io'])){
         <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
         <a href="../24-1416ReyesVariable/24-1416Reyesvarspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
         <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
-        <a href="../24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
+        <a href="../24-1416ReyesLoops/24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
         <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
