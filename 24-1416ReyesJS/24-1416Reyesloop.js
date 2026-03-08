@@ -1,7 +1,4 @@
-// ==============================
-// SAMPLE 1 – For Loop (1 to N)
-// ==============================
-
+//loop 1 to n
 document.getElementById("forLoopForm").addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -28,9 +25,7 @@ document.getElementById("forLoopForm").addEventListener("submit", function(e){
 });
 
 
-// ==============================
-// SAMPLE 2 – Even Numbers
-// ==============================
+//even numbers
 
 document.getElementById("evenForForm").addEventListener("submit", function(e){
 
@@ -58,9 +53,7 @@ document.getElementById("evenForForm").addEventListener("submit", function(e){
 });
 
 
-// ==============================
-// SAMPLE 3 – Factorial
-// ==============================
+//factorial
 
 document.getElementById("factorialForm").addEventListener("submit", function(e){
 
@@ -88,9 +81,7 @@ document.getElementById("factorialForm").addEventListener("submit", function(e){
 });
 
 
-// ==============================
-// SAMPLE 4 – Reverse Number
-// ==============================
+//Reverse number
 
 document.getElementById("reverseWhileForm").addEventListener("submit", function(e){
 
@@ -117,42 +108,37 @@ document.getElementById("reverseWhileForm").addEventListener("submit", function(
 
 });
 
-// ==============================
-// SAMPLE 5 – Billing (Do While) - IMPROVED VERSION
-// ==============================
+
+//biling process
 
 document.getElementById("billingForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // Get input values
     let name = document.getElementById("customerName").value.trim();
     let classCode = document.getElementById("classCode").value;
     let days = document.getElementById("days").value;
 
-    // Validation
     if(name === "" || classCode === "" || days === "") {
-        document.getElementById("multipleDoOutput").innerHTML = "⚠️ Please complete all fields.";
+        document.getElementById("multipleDoOutput").innerHTML = "Please complete all fields.";
         return;
     }
 
-    // Validate class code range (1-3)
     if(classCode < 1 || classCode > 3) {
         document.getElementById("multipleDoOutput").innerHTML = 
-            "⚠️ Class code must be between 1 and 3 only.";
+            "Class code must be between 1 and 3 only.";
         return;
     }
 
-    // Validate days (positive number)
     if(days <= 0) {
         document.getElementById("multipleDoOutput").innerHTML = 
-            "⚠️ Number of days must be greater than 0.";
+            "Number of days must be greater than 0.";
         return;
     }
 
-    // Show loading message
+
     document.getElementById("multipleDoOutput").innerHTML = "Computing...";
 
-    // Send data to PHP
+
     fetch("24-1416Reyesdowhile_billingprocess.php", {
         method: "POST",
         headers: {
@@ -169,10 +155,9 @@ document.getElementById("billingForm").addEventListener("submit", function(e) {
         return response.text();
     })
     .then(data => {
-        // Display the result
         document.getElementById("multipleDoOutput").innerHTML = data;
         
-        // Save to localStorage
+
         localStorage.setItem("customerName", name);
         localStorage.setItem("classCode", classCode);
         localStorage.setItem("days", days);
@@ -186,9 +171,7 @@ document.getElementById("billingForm").addEventListener("submit", function(e) {
 });
 
 
-// ==============================
-// RESTORE DATA ON PAGE LOAD
-// ==============================
+//Restore data
 
 window.addEventListener("load", function(){
 
@@ -224,9 +207,7 @@ window.addEventListener("load", function(){
 });
 
 
-// ==============================
-// RESET BUTTONS
-// ==============================
+///Reset button
 
 document.getElementById("resetForLoop").addEventListener("click", function(){
     document.getElementById("forLoopInput").value = "";

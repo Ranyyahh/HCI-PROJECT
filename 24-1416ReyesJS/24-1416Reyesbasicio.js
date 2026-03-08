@@ -89,23 +89,22 @@ document.getElementById("bmiForm").addEventListener("submit", function(e){
     let weight = document.getElementById("weightInput").value.trim();
     let height = document.getElementById("heightInput").value.trim();
 
-    // Validate that inputs are not empty and are valid numbers
+
     if(weight === "" || height === "") {
         document.getElementById("bmiOutput").textContent = "Please enter both weight and height.";
         return;
     }
 
-    // Check if inputs are valid numbers (including decimals)
     if(isNaN(weight) || isNaN(height)) {
         document.getElementById("bmiOutput").textContent = "Please enter valid numbers.";
         return;
     }
 
-    // Convert to numbers for validation
+
     let weightNum = parseFloat(weight);
     let heightNum = parseFloat(height);
 
-    // Check if values are positive
+
     if(weightNum <= 0 || heightNum <= 0) {
         document.getElementById("bmiOutput").textContent = "Please enter positive values.";
         return;
@@ -124,7 +123,7 @@ document.getElementById("bmiForm").addEventListener("submit", function(e){
 
         document.getElementById("bmiOutput").textContent = data;
         
-        // Store the raw input values (as strings, preserving decimal format)
+
         localStorage.setItem("weightInput", weight);
         localStorage.setItem("heightInput", height);
         localStorage.setItem("bmiOutput", data);
@@ -277,7 +276,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             item.addEventListener("click", function () {
 
-                // CLEAR ALL LOCAL STORAGE
                 localStorage.clear();
 
             });

@@ -1,6 +1,4 @@
-// ==============================
-// SAMPLE 1 – String Variable: Name Processor
-// ==============================
+//Sample 1
 document.getElementById("stringForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -30,10 +28,7 @@ document.getElementById("stringForm").addEventListener("submit", function(e) {
     });
 });
 
-
-// ==============================
-// SAMPLE 2 – Integer Variable: Age Calculator
-// ==============================
+//age calcu
 document.getElementById("integerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -44,7 +39,6 @@ document.getElementById("integerForm").addEventListener("submit", function(e) {
         return;
     }
 
-    // Validate year
     let currentYear = new Date().getFullYear();
     if(year < 1900 || year > currentYear) {
         document.getElementById("integerOutput").innerHTML = "⚠️ Please enter a valid birth year (1900-" + currentYear + ").";
@@ -71,9 +65,7 @@ document.getElementById("integerForm").addEventListener("submit", function(e) {
 });
 
 
-// ==============================
-// SAMPLE 3 – Float Variable: Grade Average
-// ==============================
+//grade average
 document.getElementById("floatForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -86,7 +78,6 @@ document.getElementById("floatForm").addEventListener("submit", function(e) {
         return;
     }
 
-    // Validate grade range
     if(grade1 < 0 || grade1 > 100 || grade2 < 0 || grade2 > 100 || grade3 < 0 || grade3 > 100) {
         document.getElementById("floatOutput").innerHTML = "⚠️ Grades must be between 0 and 100.";
         return;
@@ -116,9 +107,7 @@ document.getElementById("floatForm").addEventListener("submit", function(e) {
 });
 
 
-// ==============================
-// SAMPLE 4 – Boolean Variable: Password Check
-// ==============================
+//password check
 document.getElementById("booleanForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -148,9 +137,7 @@ document.getElementById("booleanForm").addEventListener("submit", function(e) {
     });
 });
 
-// ==============================
-// SAMPLE 5 – Multiple Data Types: Student Information
-// ==============================
+//student information
 document.getElementById("multiTypeForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -162,7 +149,6 @@ document.getElementById("multiTypeForm").addEventListener("submit", function(e) 
         return;
     }
 
-    // Validate age
     if(age < 1 || age > 120) {
         document.getElementById("multiTypeOutput").innerHTML = "⚠️ Please enter a valid age (1-120).";
         return;
@@ -190,9 +176,7 @@ document.getElementById("multiTypeForm").addEventListener("submit", function(e) 
 });
 
 
-// ==============================
-// RESTORE DATA ON PAGE LOAD
-// ==============================
+//restore data
 window.addEventListener("load", function() {
     // Sample 1 - String
     if (localStorage.getItem("stringInput")) {
@@ -244,9 +228,8 @@ window.addEventListener("load", function() {
     }
 });
 
-// ==============================
-// RESET BUTTONS
-// ==============================
+
+//reset buttons
 
 // Reset Sample 1 - String
 document.getElementById("resetString").addEventListener("click", function() {
@@ -295,9 +278,7 @@ document.getElementById("resetMultiType").addEventListener("click", function() {
 });
 
 
-// ==============================
-// NAVIGATION WITH LOCALSTORAGE CLEAR
-// ==============================
+
 document.addEventListener("DOMContentLoaded", function () {
     
     let navItems = document.querySelectorAll(".nav-item");
@@ -306,13 +287,11 @@ document.addEventListener("DOMContentLoaded", function () {
         
         item.addEventListener("click", function (e) {
             
-            // Get the href link
             let href = this.getAttribute("href");
             
-            // Check if it's a valid link and not the current page
             if (href && href !== "#" && !this.classList.contains('active')) {
                 
-                // Prevent default navigation muna
+        
                 e.preventDefault();
                 
                 // Clear all localStorage
@@ -320,10 +299,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 console.log("✅ LocalStorage cleared! Navigating to: " + href);
                 
-                // Now navigate to the new page
+
                 window.location.href = href;
             }
-            // If it's the current page (active), do nothing
+      
             else if (this.classList.contains('active')) {
                 e.preventDefault();
                 console.log("📍 Already on current page");
@@ -336,9 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// ==============================
-// INPUT VALIDATION ON BLUR (Real-time)
-// ==============================
+//input validation
 
 // Sample 2 - Birth Year validation
 document.getElementById("birthYearInput").addEventListener("blur", function() {

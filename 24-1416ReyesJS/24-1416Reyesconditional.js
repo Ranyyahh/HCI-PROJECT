@@ -204,9 +204,8 @@ window.addEventListener("load", function(){
 
 });
 
-// ==============================
-// RESET BUTTONS
-// ==============================
+
+//reset buttons
 
 // Sample 1 – Letter Grade
 document.getElementById("resetLetterGrade").addEventListener("click", function(){
