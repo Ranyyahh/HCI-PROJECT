@@ -239,6 +239,13 @@ body {
     font-weight: normal;
 }
 
+#weightInput {
+    font-size: 20px;
+    height: 37px;
+    margin-left: 13px;
+    margin-top: 10px;
+}
+
 #heightInput {
      font-size: 20px;
     height: 37px;
@@ -248,7 +255,7 @@ body {
 
 #sample4 .add-btn {
     display: block;
-    margin-left: 135px;
+    margin-left: 145px;
     margin-top: -20px;
     padding: 12px 80px;
     border-radius: 8px;
@@ -380,10 +387,19 @@ body {
     object-fit: contain;
 }
 
+#sample .reset-btn {
+    display: block;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 12px 135px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
 
 .reset-btn {
     display: block;
-    margin-left: 0px;
+    margin-left: 5px;
     margin-top: 20px;
     padding: 12px 135px;
     border-radius: 8px;

@@ -2,14 +2,15 @@
 if(isset($_POST['weight']) && isset($_POST['height'])){
 
     $weight = floatval($_POST['weight']);
-    $height = floatval($_POST['height']);
+    $height_cm = floatval($_POST['height']);
 
-    if($weight > 0 && $height > 0){
+    if($weight > 0 && $height_cm > 0){
 
-        $bmi = $weight / ($height * $height);
+        $height_m = $height_cm / 100;
+        
+        $bmi = $weight / ($height_m * $height_m);
         $bmi = number_format($bmi, 2);
 
-        // Optional category
         if($bmi < 18.5){
             $category = "Underweight";
         }

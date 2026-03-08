@@ -8,11 +8,11 @@ if(isset($_POST['userName'])){
     $wordCount = str_word_count($name);
     
     echo "<div style='font-family: Arial, sans-serif;'>";
-    echo "<strong>Original Text:</strong> " . $name . " <em>(String)</em><br>";
-    echo "<strong>Uppercase:</strong> " . $upperName . " <em>(String)</em><br>";
-    echo "<strong>Lowercase:</strong> " . $lowerName . " <em>(String)</em><br>";
-    echo "<strong>Number of Characters:</strong> " . $nameLength . " <em>(Integer)</em><br>";
-    echo "<strong>Number of Words:</strong> " . $wordCount . " <em>(Integer)</em><br>";
+    echo "<strong>Original Text:</strong> " . $name . " <br>";
+    echo "<strong>Uppercase:</strong> " . $upperName . " <br>";
+    echo "<strong>Lowercase:</strong> " . $lowerName . " <br>";
+    echo "<strong>Number of Characters:</strong> " . $nameLength . " <br>";
+    echo "<strong>Number of Words:</strong> " . $wordCount . "<br>";
     echo "</div>";
 } else {
     echo "Please enter a name.";

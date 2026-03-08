@@ -13,7 +13,7 @@ if(isset($_POST['password'])){
     $isStrong = (strlen($enteredPassword) >= 8);
     
     echo "<div style='font-family: Arial, sans-serif;'>";
-    echo "<strong>Entered Password:</strong> " . str_repeat("•", strlen($enteredPassword)) . " <em></em><br>";
+    echo "<strong>Entered Password:</strong> " . htmlspecialchars($enteredPassword) . " <em></em><br>";
     echo "<strong>Password Length:</strong> " . strlen($enteredPassword) . " characters <em></em><br>";
     echo "<strong>Correct Password?</strong> " . ($isCorrect ? "TRUE" : "FALSE") . " <em></em><br>";
     echo "<strong>Admin Access?</strong> " . ($isAdmin ? "TRUE" : "FALSE") . " <em></em><br>";

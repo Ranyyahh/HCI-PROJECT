@@ -19,7 +19,7 @@ if(!isset($_SESSION['loops'])){
 <html>
 <head>
     <title>Loops</title>
- <link rel="stylesheet" href="../../../24-1416ReyesCSS/24-1416ReyesLoopspage.css">
+ <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesLoopspage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -36,11 +36,11 @@ if(!isset($_SESSION['loops'])){
     <div class="sidebar">
         <div class="nav-title">NAVIGATION</div>
 
-        <a href="../24-1416ReyesBasicIO/24-1416Reyesbasicpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
-        <a href="../24-1416ReyesVariable/24-1416Reyesvarspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
-        <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
-        <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
-        <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
+        <a href="../24-1416ReyesBasicIO/24-1416Reyesbasicpage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
+        <a href="../24-1416ReyesVariable/24-1416Reyesvarspage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
+        <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
+        <a href="#" class="nav-item active"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
+        <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
@@ -68,7 +68,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Generate numbers from 1 to:</label>
-            <input type="number" id="forLoopInput">
+            <input type="number" id="forLoopInput" min="1">
 
             <br><br>
 
@@ -111,7 +111,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter maximum number:</label>
-            <input type="number" id="evenForInput">
+            <input type="number" id="evenForInput" min="2">
 
             <br><br>
 
@@ -132,7 +132,7 @@ if(!isset($_SESSION['loops'])){
         <h4>Description</h4>
         <p>
             Uses a for loop to print all even numbers
-            from 1 up to the entered maximum value.
+            from 2 up to the entered maximum value.
         </p>
     </div>
 
@@ -153,7 +153,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter a number:</label>
-            <input type="number" id="factorialInput">
+            <input type="number" id="factorialInput" min="1">
 
             <br><br>
 
@@ -192,7 +192,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter a number:</label>
-            <input type="number" id="reverseWhileInput">
+            <input type="number" id="reverseWhileInput" min="1" max="999999999">
 
             <br><br>
 
@@ -211,11 +211,12 @@ if(!isset($_SESSION['loops'])){
         <h4>Description</h4>
         <p>
             Uses a while loop to reverse the digits
-            of the entered number.
+            of the entered number. Users can enter a number up to 9 digits long.
         </p>
     </div>
 
 </div>
+
 <!-- SAMPLE 5 -->
 <div class="sample-header">
     Sample 5 - <span>Do While: ABCD Company Billing</span>
@@ -267,6 +268,6 @@ if(!isset($_SESSION['loops'])){
 
 </div>
 </div>
-<script src="../../../24-1416ReyesJS/24-1416ReyesLoopspage/24-1416Reyesloop.js"></script>
+<script src="../../24-1416ReyesJS/24-1416Reyesloop.js"></script>
     </body>
 </html>

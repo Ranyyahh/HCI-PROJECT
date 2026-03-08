@@ -19,7 +19,7 @@ if(!isset($_SESSION['basic_io'])){
 <html>
 <head>
     <title>Basic Input and Output</title>
- <link rel="stylesheet" href="../../../24-1416ReyesCSS/24-1416ReyesBasicIOpage.css">
+ <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesBasicIOpage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -36,11 +36,11 @@ if(!isset($_SESSION['basic_io'])){
     <div class="sidebar">
         <div class="nav-title">NAVIGATION</div>
 
-        <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
-        <a href="../24-1416ReyesVariable/24-1416Reyesvarspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
-        <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
-        <a href="../24-1416ReyesLoops/24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
-        <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
+        <a href="#" class="nav-item active"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
+        <a href="../24-1416ReyesVariable/24-1416Reyesvarspage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
+        <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
+        <a href="../24-1416ReyesLoops/24-1416Reyesloopspage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
+        <a href="../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
@@ -195,12 +195,12 @@ if(!isset($_SESSION['basic_io'])){
             <br><br>
 
             <label>Weight (kg):</label>
-            <input type="number" id="weightInput">
+            <input type="number" id="weightInput" step="0.01" min="0">
 
             <br>
 
-            <label>Height (m):</label>
-            <input type="number" id="heightInput">
+            <label>Height (cm):</label>
+            <input type="number" id="heightInput"  step="0.01" min="0">
 
             <br><br>
 
@@ -278,6 +278,6 @@ if(!isset($_SESSION['basic_io'])){
 
 
 </div>
-<script src="../../../24-1416ReyesJS/24-1416ReyesBasicIOpage/24-1416Reyesbasicio.js"></script>
+<script src="../../24-1416ReyesJS/24-1416Reyesbasicio.js"></script>
     </body>
 </html>

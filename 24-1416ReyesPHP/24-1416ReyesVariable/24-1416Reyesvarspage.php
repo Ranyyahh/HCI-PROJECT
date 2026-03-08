@@ -19,7 +19,7 @@ if(!isset($_SESSION['variables'])){
 <html>
 <head>
     <title>Variables and Data Types</title>
- <link rel="stylesheet" href="../../../24-1416ReyesCSS/24-1416ReyesVariablepage.css">
+ <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesVariablepage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -36,11 +36,11 @@ if(!isset($_SESSION['variables'])){
     <div class="sidebar">
         <div class="nav-title">NAVIGATION</div>
 
-        <a href="../24-1416ReyesBasicIO/24-1416Reyesbasicpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
-        <a href="#" class="nav-item active"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
-        <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
-        <a href="../24-1416ReyesLoops/24-1416Reyesloopspage.php" class="nav-item"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
-        <a href="../../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
+        <a href="../24-1416ReyesBasicIO/24-1416Reyesbasicpage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesBasicIOSidebar.png" alt="Basic IO" class="box-img">Basic Input/Output</a>
+        <a href="#" class="nav-item active"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesVarsSidebar.png" alt="Variables & Data Types" class="box-img">Variables & Data Types</a>
+        <a href="../24-1416ReyesConditional/24-1416Reyesconditionalpage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesIfelseSidebar.png" alt="Conditional Statements" class="box-img">Conditional Statements</a>
+        <a href="../24-1416ReyesLoops/24-1416Reyesloopspage.php" class="nav-item"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416ReyesLoopSidebar.png" alt="Loops" class="box-img">Loops</a>
+        <a href="../../24-1416ReyesHTML/24-1416ReyesWelcomepage.html" class="back-btn"><img src="../../24-1416ReyesIMAGES/24-1416ReyesWebsite/24-1416Reyesbackbutton.png" alt="Back button" class="back-icon">Back</a>
     </div>
 
 
@@ -96,7 +96,7 @@ if(!isset($_SESSION['variables'])){
             <label class="section-label">Input</label>
             <br><br>
             <label>Enter your birth year:</label>
-            <input type="number" id="birthYearInput">
+            <input type="number" id="birthYearInput" min="1900" max="<?= date("Y") ?>">
             <br><br>
             <button type="submit" class="add-btn">Calculate Age</button>
         </form>
@@ -127,13 +127,13 @@ if(!isset($_SESSION['variables'])){
         <form id="floatForm">
             <label class="section-label">Input</label>
             <label>Grade 1:</label>
-            <input type="number" id="grade1Input" step="0.01" >
+            <input type="number" id="grade1Input" step="0.01" min="50" max="100">
             <br>
             <label>Grade 2:</label>
-            <input type="number" id="grade2Input" step="0.01" >
+            <input type="number" id="grade2Input" step="0.01" min="50" max="100">
             <br>
             <label>Grade 3:</label>
-            <input type="number" id="grade3Input" step="0.01" >
+            <input type="number" id="grade3Input" step="0.01" min="50" max="100">
             <br><br>
             <button type="submit" class="add-btn">Compute Average</button>
         </form>
@@ -200,7 +200,7 @@ if(!isset($_SESSION['variables'])){
             <input type="text" id="studentNameInput">
             <br>
             <label>Age:</label>
-            <input type="number" id="studentAgeInput" >
+            <input type="number" id="studentAgeInput" min="0" >
             <br>
             <button type="submit" class="add-btn">Process Info</button>
         </form>
@@ -219,6 +219,6 @@ if(!isset($_SESSION['variables'])){
         <p>This example combines MULTIPLE DATA TYPES. It shows how String, Integer, Float, and Boolean variables work together in one program.</p>
     </div>
 </div>
-<script src="../../../24-1416ReyesJS/24-1416ReyesVarspage/24-1416Reyesvars.js"></script>
+<script src="../../24-1416ReyesJS/24-1416Reyesvars.js"></script>
     </body>
 </html>

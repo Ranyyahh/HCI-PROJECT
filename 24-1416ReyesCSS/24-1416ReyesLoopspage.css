@@ -267,7 +267,46 @@ body {
     padding: 10px 93px;
     border-radius: 8px;
 }
+/* I-ADD ITO SA IYONG CSS - PARA SA OUTPUT BOX NG SAMPLE 4 */
+#sample4 .output-box {
+    width: 320px;
+    height: 80px;
+    min-height: 80px;
+    max-height: 80px;
+    
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    
+    padding: 15px;
+    box-sizing: border-box;
+    
+    display: block;
+    
+    /* ITO ANG MAHALAGA PARA SA SCROLLBAR */
+    white-space: nowrap;         /* Pinipigilan ang text na mag-wrap */
+    overflow-x: auto;            /* Nagpapakita ng horizontal scrollbar */
+    overflow-y: hidden;          /* Itinatago ang vertical scrollbar */
+}
 
+/* Optional: I-style ang scrollbar para mas visible */
+#sample4 .output-box::-webkit-scrollbar {
+    height: 8px;
+}
+
+#sample4 .output-box::-webkit-scrollbar-thumb {
+    background: #2f4f7f;
+    border-radius: 4px;
+}
+
+#sample4 .output-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
 
 #sample4 .sample-left label:not(.section-label) {
     font-size: 23px;  
@@ -341,28 +380,26 @@ body {
 
 #sample5 .output-box {
     width: 320px;
-    height: 80px;                
-    min-height: 80px;
-    max-height: 80px;
-
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 8px;
-
-    font-size: 15px;
-    font-weight: bold;
-    color: #000000;
-
-    padding: 15px;
-    box-sizing: border-box;
-
-    display: block;               
+    height: 100px;                
+    min-height: 140px;
+    max-height: 140px;        
     
-    white-space: nowrap;         
-    overflow-x: auto;             
-    overflow-y: hidden;          
-
+    background-color: #ffffff;
+    border: 2px solid #2f4f7f;
+    border-radius: 8px;
+    
+    font-size: 14px;
+    padding: 12px;
+    line-height: 1.6;          
+    
+    white-space: normal;         
+    overflow-y: auto;             
+    overflow-x: hidden;          
+    
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
 }
+
 
 #sample5 .add-btn {
     grid-column: span 2;      
