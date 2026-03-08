@@ -6,23 +6,24 @@ if(isset($_POST['grade'])){
     $grade = strtoupper(trim($_POST['grade']));
     $result = "";
 
-    if($grade == "A"){
-        $result = "EXCELLENT!";
-    }
-    else if($grade == "B"){
-        $result = "ABOVE AVERAGE!";
-    }
-    else if($grade == "C"){
-        $result = "AVERAGE!";
-    }
-    else if($grade == "D"){
-        $result = "BELOW AVERAGE!";
-    }
-    else if($grade == "F"){
-        $result = "FAILED!";
-    }
-    else{
-        $result = "INPUT ERROR!";
+    switch($grade){
+        case "A":
+            $result = "EXCELLENT!";
+            break;
+        case "B":
+            $result = "ABOVE AVERAGE!";
+            break;
+        case "C":
+            $result = "AVERAGE!";
+            break;
+        case "D":
+            $result = "BELOW AVERAGE!";
+            break;
+        case "F":
+            $result = "FAILED!";
+            break;
+        default:
+            $result = "INPUT ERROR!";
     }
 
     $_SESSION['conditionals']['sample1'] =

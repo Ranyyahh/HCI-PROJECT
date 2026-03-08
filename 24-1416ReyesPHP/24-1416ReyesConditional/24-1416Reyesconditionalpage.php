@@ -50,8 +50,10 @@ if(!isset($_SESSION['conditionals'])){
     <p class="page-desc">Conditional Statements in Fundamentals of Programming refer to the control structures that allow the program to make decisions based on certain conditions.</p>
     <p class="supporting-desc">• If Statement: This is used to execute a block of code only if a specified condition is true. <br>
     • If-Else Statement: This is used to execute one block of code if a condition is true, and another block if it is false. <br>
-    • If-Else if-Else Statement: This is used to check multiple conditions and execute different blocks of code based on which condition is true.
-    </p>
+    • If-Else if-Else Statement: This is used to check multiple conditions and execute different blocks of code based on which condition is true. <br>
+    • Nested If Statements: This is when you have an if statement inside another if statement, allowing for more complex decision-making. <br>
+    • Switch Statement: This is used to perform different actions based on different conditions, typically when you have a variable that can take on multiple values. <br> 
+</p>
 
   <!-- SAMPLE 1 -->
 <div class="sample-header">
@@ -88,8 +90,8 @@ if(!isset($_SESSION['conditionals'])){
     <div class="sample-right">
         <h4>Description</h4>
         <p>
-            This example uses an if-else-if statement with logical OR (||)
-            to determine the remarks based on the entered letter grade.
+            This example uses a switch statement to determine the remarks based on the letter grade input.
+            Each case corresponds to a specific letter grade, and the default case handles invalid inputs.
         </p>
     </div>
 
@@ -128,7 +130,7 @@ if(!isset($_SESSION['conditionals'])){
     <div class="sample-right">
         <h4>Description</h4>
         <p>
-            This example uses an if-else statement to determine if a student passed or failed.
+            This example uses an if-else statement to determine if a student passed or failed. User will input a numeric grade in whole number. 
         </p>
     </div>
 
@@ -175,9 +177,9 @@ if(!isset($_SESSION['conditionals'])){
 </div>
 
 
-  <!-- SAMPLE 4 -->
+ <!-- SAMPLE 4 -->
 <div class="sample-header">
-    Sample 4 - <span>Even or Odd Checker</span>
+    Sample 4 - <span>Even or Odd with Nested IF</span>
 </div>
 
 <div id="sample4" class="sample-box">
@@ -207,8 +209,14 @@ if(!isset($_SESSION['conditionals'])){
     <div class="sample-right">
         <h4>Description</h4>
         <p>
-            This example checks whether the entered number is EVEN or ODD 
-            using an if-else statement and the modulus (%) operator.
+            <strong>NESTED IF STATEMENT:</strong> This example uses nested if statements to determine if a number is EVEN or ODD,
+            with additional validation and classification.<br><br>
+            
+            <strong>Logic Flow:</strong><br>
+            • First IF: Check if input is a valid number<br>
+            • Nested IF: Check if number is positive, negative, or zero<br>
+            • Double Nested IF: Check if number is even or odd<br>
+            • Additional classification for special numbers
         </p>
     </div>
 

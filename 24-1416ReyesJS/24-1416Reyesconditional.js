@@ -79,13 +79,26 @@ document.getElementById("numberForm").addEventListener("submit", function(e){
 
 });
 
-// Even or Odd Checker
+
+
+// Even or Odd Checker with Nested IF 
 
 document.getElementById("evenOddForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
     let number = document.getElementById("evenOddInput").value;
+    
+
+    if(number === "" || number === null){
+        alert("Please enter a number!");
+        return;
+    } else {
+        if(isNaN(number)){
+            alert("Invalid input! Please enter a valid number.");
+            return;
+        }
+    }
 
     fetch("24-1416Reyesevenodd_process.php", {
         method: "POST",
@@ -105,7 +118,6 @@ document.getElementById("evenOddForm").addEventListener("submit", function(e){
     });
 
 });
-
 
 // Voting Qualification Checker
 

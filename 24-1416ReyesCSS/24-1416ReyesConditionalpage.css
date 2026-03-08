@@ -261,9 +261,27 @@ body {
     font-weight: normal;
 }
 
+#sample4 .sample-right h4 {
+    margin-top: 90px;
+}
+
+#sample4 .sample-right{
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-bottom: 90px;
+    align-content: center;
+    align-items: center;
+     display: flex;
+    flex-direction: column;   
+    justify-content: center 
+}
+
 #evenOddForm label:not(.section-label) {
      margin-left: 170px;
 }
+
 
 #evenOddInput {
     font-size: 20px;
