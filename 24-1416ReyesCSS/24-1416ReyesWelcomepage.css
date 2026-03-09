@@ -1,4 +1,4 @@
-/* Main Styles - Responsive Design */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     font-family: 'Dm Sans', sans-serif;
 }
 
-/* Header Bar - Responsive */
+
 .bar {
     width: 100%;
     height: 75px;
@@ -43,7 +43,7 @@ body {
     margin-left: 15px;           
 }
 
-/* Main Heading - Responsive */
+
 h1 {
     font-family: 'Horizon', sans-serif;
     font-size: 65px;
@@ -63,7 +63,7 @@ p {
     color: #2f4f7f;
 }
 
-/* Welcome Image - Responsive */
+
 .welcome-img {
     width: 100%;
     max-width: 1200px;
@@ -74,7 +74,7 @@ p {
     object-fit: cover;
 }
 
-/* Container Grid - Responsive */
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 600px));
@@ -85,7 +85,7 @@ p {
     margin-top: 50px;
 }
 
-/* Box Styles - Responsive */
+
 .box {
     display: flex;
     align-items: center;
@@ -121,7 +121,7 @@ p {
     flex-shrink: 0;
 }
 
-/* Text Styles - Responsive */
+
 .Basic, .Conditional, .Variables, .Loops {
     font-family: 'Dm Sans', sans-serif;
     font-weight: bold;
@@ -147,7 +147,7 @@ p {
     margin-left: 20px;
 }
 
-/* Footer - Responsive */
+
 .foot-bar {
     width: 100%;
     height: 75px;

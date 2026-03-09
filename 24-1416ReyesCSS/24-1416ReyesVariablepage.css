@@ -1,4 +1,4 @@
-/* Basic IO Page - Fully Responsive */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
-/* Header Bar - Responsive */
+
 .bar {
     width: 100%;
     height: 75px;
@@ -44,13 +44,13 @@ body {
     margin-left: 15px;           
 }
 
-/* Layout - Responsive */
+
 .layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* Sidebar - Responsive */
+
 .sidebar {
     width: 280px;
     height: calc(100vh - 75px); 
@@ -100,7 +100,7 @@ body {
     font-weight: bold;
 }
 
-/* Main Content - Responsive */
+
 .main-content {
     margin-left: 280px;
     margin-top: 75px;    
@@ -145,7 +145,7 @@ body {
     font-weight: normal;
 }
 
-/* Sample Box - Responsive */
+
 .sample-box {
     width: 100%;
     height: auto;
@@ -199,7 +199,7 @@ body {
     width: 100%;
 }
 
-/* Sample 1 - String Operations */
+
 #sample1 .section-label {
     margin: 20px 0;
 }
@@ -243,7 +243,7 @@ body {
     min-width: 200px;
 }
 
-/* Sample 2 - Age Calculator */
+
 #sample2 .section-label {
     margin: 20px 0;
 }
@@ -280,7 +280,7 @@ body {
     min-width: 200px;
 }
 
-/* Sample 3 - Grade Average */
+
 #sample3 .sample-left label:not(.section-label) {
     font-size: clamp(18px, 2.5vw, 23px);
     font-weight: normal;
@@ -316,7 +316,7 @@ body {
     min-height: 120px;
 }
 
-/* Sample 4 - Password Validator */
+
 #booleanForm {
     width: 100%;
     display: flex;
@@ -365,7 +365,7 @@ body {
     min-height: 150px;
 }
 
-/* Sample 5 - Student Info */
+
 #multiTypeForm {
     width: 100%;
     display: flex;
@@ -414,7 +414,6 @@ body {
     min-height: 150px;
 }
 
-/* Sample Middle - Responsive */
 .sample-middle {
     flex: 1;
     min-width: 250px;
@@ -445,7 +444,7 @@ body {
     margin-left: 0;
 }
 
-/* Sample Right - Responsive */
+
 .sample-right {
     flex: 1;
     min-width: 250px;
@@ -467,7 +466,7 @@ body {
     text-align: center;
 }
 
-/* Buttons - Responsive */
+
 .add-btn {
     transition: all 0.3s ease;
 }
@@ -478,7 +477,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Output Box - Responsive */
 .output-box {
     width: 90%;
     max-width: 300px;
@@ -529,7 +527,7 @@ body {
     object-fit: contain;
 }
 
-/* Reset Button - Responsive */
+
 .reset-btn {
     display: block;
     margin: 15px auto 0;
@@ -789,9 +787,9 @@ body {
     margin-top: 0px; 
 }
 
-/* PARA MAGKATABI ANG AGE LABEL AT INPUT */
+
 #sample5 .sample-left form label[for="studentAgeInput"] {
-    margin-bottom: 0; /* ALISIN ANG NEGATIVE MARGIN */
+    margin-bottom: 0; 
     margin-right: 15px;
     color: #2f4f7f;
     display: inline-block;
@@ -808,7 +806,7 @@ body {
     vertical-align: middle;
 }   
 
-/* PARA MAGKATABI ANG NAME LABEL AT INPUT */
+
 #sample5 .sample-left form label[for="studentNameInput"] {
     display: inline-block;
     vertical-align: middle;
@@ -823,15 +821,15 @@ body {
     vertical-align: middle;
 }
 
-/* ITAGO ANG MGA BR */
+
 #multiTypeForm br {
     display: none;
 }
 
 #sample5 .add-btn {
     display: block;
-    margin-top: 30px; /* I-ADJUST PARA NASA BABA NG MGA INPUT */
-    margin-left: 95px; /* I-ADJUST PARA NASA ILALIM NG INPUTS */
+    margin-top: 30px; 
+    margin-left: 95px; 
     padding: 8px 8px;
     border-radius: 8px;
     width: auto;
