@@ -1,11 +1,17 @@
+/* Main Styles - Responsive Design */
 html, body {
     margin: 0;
     padding: 0;
-}
-body {
-    user-select: none;
+    width: 100%;
+    overflow-x: hidden;
 }
 
+body {
+    user-select: none;
+    font-family: 'Dm Sans', sans-serif;
+}
+
+/* Header Bar - Responsive */
 .bar {
     width: 100%;
     height: 75px;
@@ -37,6 +43,7 @@ body {
     margin-left: 15px;           
 }
 
+/* Main Heading - Responsive */
 h1 {
     font-family: 'Horizon', sans-serif;
     font-size: 65px;
@@ -48,7 +55,7 @@ h1 {
         -1px -1px 2px rgba(255, 255, 255, 0.4);
 }
 
-p{
+p {
     font-family: 'Dm Sans', sans-serif;
     font-size: 18px;
     text-align: center;
@@ -56,29 +63,37 @@ p{
     color: #2f4f7f;
 }
 
+/* Welcome Image - Responsive */
 .welcome-img {
-    width: 1200px;
-    height: 310px;
-    margin-left: 345px;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 310px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
 }
 
-
+/* Container Grid - Responsive */
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 600px);
+    grid-template-columns: repeat(2, minmax(300px, 600px));
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 0px; 
-    row-gap: 5px;  
-    margin-left: 30px;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
     margin-top: 50px;
 }
 
+/* Box Styles - Responsive */
 .box {
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 500px;
-    height: 50px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 50px;
     background-color: #ffffff;
     border: 2px solid #2f4f7f;
     border-radius: 20px;
@@ -89,49 +104,50 @@ p{
     text-decoration: none;    
     cursor: pointer; 
     font-weight: bold;
-    margin-left: 340px;
-    margin-top: 0px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
 .box:hover {
-   background-color: #0e2d51;
+    background-color: #0e2d51;
     color: white;
 }
 
 .box-img {
     width: 80px;
     height: 70px;
-    margin-left:-10px ;
+    margin-left: -10px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
-.Basic{
-    font-size: 40px;
+/* Text Styles - Responsive */
+.Basic, .Conditional, .Variables, .Loops {
     font-family: 'Dm Sans', sans-serif;
     font-weight: bold;
+    font-size: clamp(24px, 4vw, 40px);
+    margin: 0;
+}
+
+.Basic {
     margin-left: 20px;
 }
 
-.Conditional{
-    font-size: 35px;
-    font-family: 'Dm Sans', sans-serif;
-    font-weight: bold;
+.Conditional {
+    font-size: clamp(24px, 3.5vw, 35px);
 }
 
-.Variables{
-    font-size: 35px;
-    font-family: 'Dm Sans', sans-serif;
-    font-weight: bold;
+.Variables {
+    font-size: clamp(24px, 3.5vw, 35px);
     margin-left: 20px;
 }
 
-.Loops{
-    font-size: 40px;
-    font-family: 'Dm Sans', sans-serif;
-    font-weight: bold;
-    margin-left: 110px;
+.Loops {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-left: 20px;
 }
 
+/* Footer - Responsive */
 .foot-bar {
     width: 100%;
     height: 75px;
@@ -141,7 +157,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .foot-fill {
@@ -156,11 +172,104 @@ p{
 
 .footer-text, .footer-text1 {
     font-family: 'Dm Sans', sans-serif;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     color: white;
     font-weight: bold;
     position: relative;
     z-index: 1;
     margin: 2px 0;
-    margin-left: 25px;
+    margin-left: -5px;
 }
+
+
+/* SPECIFIC PARA SA VICTUS LAPTOP (1366x768 to 1600px) - PINAKA-ADJUSTED */
+@media screen and (min-width: 1366px) and (max-width: 1600px) {
+      .header-text {
+        font-size: 35px; 
+        margin-left: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    .container {
+      display: grid;
+        grid-template-columns: repeat(2, 1fr); /* dalawang columns na equal */
+        gap: 30px 30px; /* row-gap: 30px, column-gap: 50px - mas malaking column gap */
+        max-width: 700px; /* limit ang overall width */
+        margin: 10px auto 0; /* center ang container */
+        padding: 5 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .box {
+      max-width: 380px; /* 280px -> 320px - pinalaki para mas maganda proportion */
+        width: 100%;
+        margin-left: -10px; /* dagdag left margin */
+        padding: 18px 15px; /* dagdag top-bottom padding */
+        gap: 15px;
+        margin-top: -20px;
+    }
+    
+    /* Para mas lumitaw yung images at text */
+    .box-img {
+        width: 70px; /* 80px -> 60px - binawasan para proportional */
+        height: 50px; /* 70px -> 50px */
+        margin-left: -5px;
+    }
+    
+    /* Adjust text sizes para sa mas maliit na box */
+    .box .Basic, 
+    .box .Conditional, 
+    .box .Variables, 
+    .box .Loops {
+        font-size: 25px; /* mas maliit na font */
+        white-space: nowrap; /* para hindi mag-wrap ang text */
+    }
+    
+    p {
+        padding-right: 70px;
+        right: -35px;
+    }
+    
+    .welcome-img {
+        max-width: 900px; /* 1000px -> 800px - binawasan */
+        width: 100%;
+        height: auto;
+        max-height: 280px; /* 310px -> 250px - binawasan height */
+        padding-right: 0px;
+        right: -40px;
+         margin-bottom: 0px;
+        margin: 0 auto;
+        display: block;
+        object-fit: cover; /* para hindi mag-stretch */
+    }
+    
+    /* Individual box text adjustments */
+    .Basic {
+        margin-left: 15px; /* 25px -> 15px */
+        padding-right: 20px; /* 40px -> 20px */
+
+    }
+    
+    .Conditional {
+        padding-right: 20px; /* 40px -> 20px */
+
+    }
+    
+    .Variables {
+        margin-left: 15px; /* 25px -> 15px */
+        padding-right: 20px; /* 40px -> 20px */
+
+    }
+    
+    .Loops {
+        margin-left: 15px; /* 25px -> 15px */
+    }
+}
+
+    

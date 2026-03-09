@@ -1,11 +1,17 @@
+/* Basic IO Page - Fully Responsive */
 html, body {
     margin: 0;
     padding: 0;
-}
-body {
-    user-select: none;
+    width: 100%;
+    overflow-x: hidden;
 }
 
+body {
+    user-select: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Header Bar - Responsive */
 .bar {
     width: 100%;
     height: 75px;
@@ -15,6 +21,7 @@ body {
     align-items: center;
     padding: 0 15px;               
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 .fill {
@@ -29,7 +36,7 @@ body {
 
 .header-text {
     font-family: 'Dm Sans', sans-serif;
-    font-size: 40px;
+    font-size: clamp(24px, 4vw, 40px);
     color: white;
     font-weight: bold;
     position: relative;
@@ -37,28 +44,28 @@ body {
     margin-left: 15px;           
 }
 
-body {
-    margin: 0;
-    font-family: 'DM Sans', sans-serif;
-}
-
+/* Layout - Responsive */
 .layout {
     display: flex;
+    min-height: 100vh;
 }
 
+/* Sidebar - Responsive */
 .sidebar {
-    width: 350px;
-    height: calc(100vh - 60px); 
+    width: 280px;
+    height: calc(100vh - 75px); 
     position: fixed;
     top: 75px;                
     padding-top: 10px;
     box-sizing: border-box;
     background: radial-gradient(circle at 0% 0%, #142754, #6687d4);
+    overflow-y: auto;
+    z-index: 900;
 }
 
 .box-img {
-    width: 50px;     
-    height: 70px;
+    width: 40px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -66,13 +73,12 @@ body {
     text-align: center;
     font-weight: bold;
     color: white;
-    font-size: 30px;
+    font-size: clamp(20px, 3vw, 30px);
     padding: 12px 0;
     background: #2d4777;
     border-radius: 6px;
     margin: 10px;
 }
-
 
 .nav-item {
     display: flex;             
@@ -80,8 +86,9 @@ body {
     gap: 10px;                 
     color: white;
     text-decoration: none;
-    padding: 12px 20px;
-    font-size: 20px;
+    padding: 10px 15px;
+    font-size: clamp(16px, 2vw, 20px);
+    white-space: nowrap;
 }
 
 .nav-item:hover {
@@ -93,17 +100,17 @@ body {
     font-weight: bold;
 }
 
-
+/* Main Content - Responsive */
 .main-content {
-    margin-left: 350px;   
+    margin-left: 280px;
     margin-top: 75px;    
-    padding: 30px 40px;   
-    width: calc(100% - 350px);
+    padding: 20px;
+    width: calc(100% - 280px);
     box-sizing: border-box;
 }
 
 .page-title {
-    font-size: 40px;
+    font-size: clamp(30px, 5vw, 40px);
     font-weight: bold;
     font-style: italic;
     color: #2f4f7f;
@@ -111,26 +118,26 @@ body {
     margin-bottom: 5px;
 }
 
-
 .page-desc {
     color: #2f4f7f;
     margin-bottom: 20px;
-    font-size: 27px;
+    font-size: clamp(20px, 3vw, 27px);
 }
 
-.supporting-desc{
+.supporting-desc {
     color: #2f4f7f;
     margin-bottom: 30px;
-    font-size: 22px;
+    font-size: clamp(18px, 2.5vw, 22px);
     line-height: 1.5;
 }
+
 .sample-header {
     text-align: right;
-    font-size: 25px;
+    font-size: clamp(20px, 3vw, 25px);
     font-weight: bold;
     color: #2f4f7f;
     margin-bottom: 8px;
-     margin-left: 100px; 
+    margin-left: 0;
 }
 
 .sample-header span {
@@ -138,300 +145,332 @@ body {
     font-weight: normal;
 }
 
-
+/* Sample Box - Responsive */
 .sample-box {
     width: 100%;
-    height: 300px;  
+    height: auto;
+    min-height: 300px;
     background: #ffffff;
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap;
     border: 2px solid #2f4f7f;
     border-radius: 10px;
     margin-bottom: 40px;
-    
 }
 
 .sample-left {
-    flex: 0.8;
+    flex: 1;
+    min-width: 280px;
     padding: 20px;
-     margin-bottom: 50px;
-     margin-right: 100px;
     align-content: center;
     align-items: center;
-     display: flex;
+    display: flex;
     flex-direction: column;   
-    font-size: 25px;
-    justify-content: center 
+    font-size: clamp(18px, 2.5vw, 25px);
+    justify-content: center;
+    margin: 0;
 }
 
 .sample-left input[type="text"],
 .sample-left input[type="number"] {
-    font-size: 20px;
-    padding: 5px 15px;
-    width: 250px;    
+    font-size: clamp(16px, 2vw, 20px);
+    padding: 8px 15px;
+    width: 100%;
+    max-width: 250px;
     border-radius: 6px;
+    box-sizing: border-box;
+    margin: 5px 0;
 }
 
 .sample-left button {
-    font-size: 20px;
-    padding: 5px 15px;
+    font-size: clamp(16px, 2vw, 20px);
+    padding: 8px 20px;
     border-radius: 6px;
     cursor: pointer;
+    margin: 5px 0;
 }
 
 .section-label {
     font-weight: bold;
-    font-size: 25px;
+    font-size: clamp(20px, 3vw, 25px);
     display: block;
     text-align: center;   
-    margin-bottom: -40px;
-    margin-left: 100px;
+    margin: 20px 0;
+    width: 100%;
 }
 
+/* Sample 1 - String Operations */
 #sample1 .section-label {
-    margin-top: 40px;
-}
-#sample1 .sample-left label:not(.section-label) {
-    font-size: 23px;  
-    font-weight: normal;
+    margin: 20px 0;
 }
 
-#stringForm label:not(.section-label){
-    font-size: 20px;
-    margin-left: 160px;
-    margin-bottom: 10px;
+#sample1 .sample-left label:not(.section-label) {
+    font-size: clamp(18px, 2.5vw, 23px);
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+}
+
+#stringForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#stringForm label:not(.section-label) {
+    font-size: clamp(16px, 2.2vw, 20px);
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
 }
 
 #stringInput {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     height: 45px;
-    margin-top: 10px;
-    margin-left: 125px;
-    margin-bottom: 10px;
-}
-#sample1 .add-btn {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
     display: block;
-    margin-left: 125px;
-    margin-top: -25px;
-    padding: 10px 87px;
-    border-radius: 8px;
 }
 
-#sample2 .section-label {
-    font-weight: bold;
-    font-size: 25px;
+#sample1 .add-btn {
     display: block;
-    text-align: center;   
-    margin-top: 40px;
-    margin-bottom: -40px;
-    margin-left: 110px;       
+    margin: 15px auto;
+    padding: 10px 30px;
+    border-radius: 8px;
+    width: auto;
+    min-width: 200px;
+}
+
+/* Sample 2 - Age Calculator */
+#sample2 .section-label {
+    margin: 20px 0;
+}
+
+#integerForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #integerForm label:not(.section-label) {
-    font-size: 25px;
-    margin-left: 150px;
-    margin-bottom: 10px;
+    font-size: clamp(18px, 2.5vw, 25px);
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
 }
 
 #birthYearInput {
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     height: 40px;
-    margin-top: 10px;
-    margin-left: 150px;
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
+    display: block;
 }
 
 #sample2 .add-btn {
     display: block;
-    margin-left: 150px;
-    margin-top: -25px;
-    padding: 10px 60px;
+    margin: 15px auto;
+    padding: 10px 30px;
     border-radius: 8px;
+    width: auto;
+    min-width: 200px;
 }
 
+/* Sample 3 - Grade Average */
 #sample3 .sample-left label:not(.section-label) {
-    font-size: 23px;  
+    font-size: clamp(18px, 2.5vw, 23px);
     font-weight: normal;
-    margin-top: 40px;
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
 }
 
-#grade1Input {
-    font-size: 20px;
+#grade1Input, #grade2Input, #grade3Input {
+    font-size: clamp(16px, 2vw, 20px);
     height: 40px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-
-#grade2Input {
-    font-size: 20px;
-    height: 40px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-}
-
-#grade3Input {
-    font-size: 20px;
-    height: 40px;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+    margin: 5px auto;
+    display: block;
 }
 
 #sample3 .section-label {
-     font-weight: bold;
-    font-size: 25px;
-    display: block;
-    text-align: center;   
-    margin-top: 70px;
-    margin-bottom:10px;
-    margin-left: 100px;       
+    margin: 20px 0;
 }
 
 #sample3 .add-btn {
-     display: block;
-    margin-left: 100px;
-    margin-top: -20px;
-    padding: 10px 45px;
+    display: block;
+    margin: 15px auto;
+    padding: 10px 30px;
     border-radius: 8px;
+    width: auto;
+    min-width: 200px;
 }
 
 #sample3 .output-box {
-    height: 120px;
+    height: auto;
+    min-height: 120px;
+}
+
+/* Sample 4 - Password Validator */
+#booleanForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #booleanForm .section-label {
-     font-weight: bold;
-    font-size: 25px;
-    display: block;
-    text-align: center;   
-    margin-top: 40px;
-    margin-bottom: -40px;
-    margin-left: 110px;       
+    margin: 20px 0;
 }
 
 #sample4 .sample-left label:not(.section-label) {
-    font-size: 23px;  
+    font-size: clamp(18px, 2.5vw, 23px);
     font-weight: normal;
-    margin-left: 170px;
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
 }
 
-
 #passwordInput {
-   font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     height: 40px;
-    margin-left: 140px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
+    display: block;
 }
 
 #sample4 .add-btn {
     display: block;
-    margin-left: 170px;
-    margin-top: -20px;
-    padding: 8px 20px;
+    margin: 15px auto;
+    padding: 8px 30px;
     border-radius: 8px;
+    width: auto;
+    min-width: 180px;
 }
 
 #sample4 .sample-middle label {
-    margin-top: 10px;          
-    margin-left: 100px;        
+    margin: 10px 0;
+    text-align: center;
+    margin-left: 0;
 }
 
 #sample4 .output-box {
-    height: 150px;
+    height: auto;
+    min-height: 150px;
+}
+
+/* Sample 5 - Student Info */
+#multiTypeForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #multiTypeForm .section-label {
-     font-weight: bold;
-    font-size: 25px;
-    display: block;
-    text-align: center;   
-    margin-top: 50px;
-    margin-bottom: 10px;
-    margin-left: 110px;        
+    margin: 20px 0;
 }
 
 #sample5 .sample-left label:not(.section-label) {
-    font-size: 23px;  
+    font-size: clamp(18px, 2.5vw, 23px);
     font-weight: normal;
-     margin-top: 30px;
-     margin-left: 140px;
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
 }
 
-#studentNameInput {
-     font-size: 20px;
+#studentNameInput, #studentAgeInput {
+    font-size: clamp(16px, 2vw, 20px);
     height: 40px;
-    margin-left: 135px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-#studentAgeInput {
-     font-size: 20px;
-    height: 40px;
-    margin-left: 135px;
-    margin-top: 0px;
+    width: 100%;
+    max-width: 250px;
+    margin: 5px auto;
+    display: block;
 }
 
 #sample5 .add-btn {
     display: block;
-    margin-left: 135px;
-    margin-top: 20px;
-    padding: 9px 67px;
+    margin: 15px auto;
+    padding: 9px 30px;
     border-radius: 8px;
+    width: auto;
+    min-width: 200px;
 }
 
 #sample5 .sample-middle label {
-    margin-top: 10px;          
-    margin-left: 100px;        
+    margin: 10px 0;
+    text-align: center;
+    margin-left: 0;
 }
 
 #sample5 .output-box {
-    height: 150px;
+    height: auto;
+    min-height: 150px;
 }
 
-.sample-left,
-.sample-middle,
+/* Sample Middle - Responsive */
 .sample-middle {
     flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sample-middle input {
-    width: 85%;
-    padding: 25px;
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
     font-weight: bold;
     border-width: 2px;
-    font-size: 25px;
-     margin-left: -50px;
+    font-size: clamp(20px, 3vw, 25px);
+    margin: 10px auto;
+    display: block;
+    box-sizing: border-box;
 }
 
 .sample-middle label {
-    margin-top: 30px;
+    margin: 10px 0;
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
-    font-size: 25px;
-    margin-left: 110px;
+    font-size: clamp(20px, 3vw, 25px);
+    text-align: center;
+    margin-left: 0;
 }
 
+/* Sample Right - Responsive */
 .sample-right {
     flex: 1;
+    min-width: 250px;
     padding: 20px;
     border-radius: 10px;
-    font-size: 23px;
-    margin-bottom: 90px;
+    font-size: clamp(18px, 2.5vw, 23px);
+    margin-bottom: 0;
     align-content: center;
     align-items: center;
-     display: flex;
+    display: flex;
     flex-direction: column;   
-    justify-content: center  
+    justify-content: center;
 }
 
 .sample-right h4 {
-    margin-bottom: -10px;  
-    margin-top: 50;
-    font-size: 25px;     
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: clamp(20px, 3vw, 25px);
+    text-align: center;
 }
 
-
+/* Buttons - Responsive */
+.add-btn {
+    transition: all 0.3s ease;
+}
 
 .add-btn:hover {
     background-color: #0e2d51;
@@ -439,43 +478,45 @@ body {
     transform: scale(1.05);
 }
 
-
-
+/* Output Box - Responsive */
 .output-box {
-    width:70%;
-    height: 100px;     
-    font-size: 15px;       
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    min-height: 100px;
     padding: 15px;
-   
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;
+    font-size: clamp(18px, 2.5vw, 25px);
     font-weight: bold;
     color: #000000;
-
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    text-align: center;
     pointer-events: none;
+    margin: 10px auto;
+    word-wrap: break-word;
 }
 
+/* Back Button - Responsive */
 .back-btn {
-    margin-top: 270px;     
-    margin-bottom: 20px;
-    align-self: center;
-    display:  flex;
+    margin: 50px auto 20px;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     background: #c8d7ed;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     font-weight: bold;
     color: #2f4f7f;
     transition: 0.3s ease;
-    margin-left: 47px;
-    width: 200px;
+    width: fit-content;
+    min-width: 180px;
 }
 
 .back-btn:hover {
@@ -483,24 +524,75 @@ body {
 }
 
 .back-icon {
-    width: 50px;
-    height: 40px;
+    width: clamp(35px, 5vw, 50px);
+    height: clamp(30px, 4vw, 40px);
     object-fit: contain;
 }
 
-
+/* Reset Button - Responsive */
 .reset-btn {
     display: block;
-    margin-left: 0px;
-    margin-top: 10px;
-    padding: 12px 135px;
+    margin: 15px auto 0;
+    padding: 10px 30px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: clamp(16px, 2.5vw, 18px);
+    width: auto;
+    min-width: 150px;
 }
 
 .reset-btn:hover {
     background-color: #0e2d51;
-     color: white; 
+    color: white; 
 }
 
+@media screen and (min-width: 1366px) and (max-width: 1600px) {
+     .header-text {
+        font-size: 35px; 
+        margin-left: 20px;
+        letter-spacing: 0.5px;
+    }
+    
+    .sidebar {
+        width: 280px;
+    }
+    
+    .main-content {
+        margin-left: 290px;
+        width: calc(100% - 290px);
+        padding: 20px;
+    }
+    
+    .nav-title {
+        padding: 15px 12px;
+        font-size: 25px;
+    }
+
+    .nav-item {
+        padding: 20px 12px;
+        font-size:18px;
+    }
+    
+    .box-img {
+        width: 35px;
+        height: 40px;
+    }
+    
+    .sample-box {
+        min-height: 280px;
+    }
+    
+    .back-btn {
+        margin-top: 100px;
+        font-size: 24px;
+        padding: 8px 15px;
+        margin-left: 30px;
+    }
+
+    .back-icon {
+    width: 40px; 
+    height: 30px; 
+    object-fit: contain;
+    margin-left: -20px;
+}
+}

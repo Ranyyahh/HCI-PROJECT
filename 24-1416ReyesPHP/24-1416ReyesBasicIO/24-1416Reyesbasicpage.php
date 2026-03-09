@@ -16,9 +16,11 @@ if(!isset($_SESSION['basic_io'])){
 }
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Basic Input and Output</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesBasicIOpage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
@@ -68,7 +70,7 @@ if(!isset($_SESSION['basic_io'])){
         <label>Enter Text:</label>
         <input type="text" id="reverseInput">
 
-        <br><br>
+        <br><br>sss
 
         <button type="submit" class="add-btn">Reverse</button>
 
