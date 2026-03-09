@@ -5,7 +5,6 @@ document.getElementById("reverseForm").addEventListener("submit", function(e) {
 
     let text = document.getElementById("reverseInput").value.trim();
     
-    // CLIENT-SIDE VALIDATION
     if(text === "") {
         document.getElementById("reverseOutput").textContent = "Please enter some text.";
         return;

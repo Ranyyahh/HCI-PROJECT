@@ -3,8 +3,7 @@ document.getElementById("forLoopForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    let number = document.getElementById("forLoopInput").value.trim(); // (1) TRIM
-    
+    let number = document.getElementById("forLoopInput").value.trim();
    
     if(number === "") { 
         document.getElementById("forLoopOutput").innerHTML = "⚠️ Please enter a number.";
@@ -57,41 +56,40 @@ document.getElementById("forLoopForm").addEventListener("submit", function(e){
 
 
 //even numbers
-//even numbers
 document.getElementById("evenForForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    let number = document.getElementById("evenForInput").value.trim(); // (1) TRIM
+    let number = document.getElementById("evenForInput").value.trim();
     
-    // VALIDATIONS
-    if(number === "") { // (2) EMPTY CHECK
+
+    if(number === "") { 
         document.getElementById("evenForOutput").innerHTML = "⚠️ Please enter a number.";
         return;
     }
     
-    // Check if it's a number
-    if(isNaN(number)) { // (3) NUMBER CHECK
+    
+    if(isNaN(number)) { 
         document.getElementById("evenForOutput").innerHTML = "⚠️ Please enter a valid number.";
         return;
     }
     
-    // Convert to integer
-    number = parseInt(number); // (4) CONVERT TO INTEGER
+   
+    number = parseInt(number); 
     
-    // Check if it's positive
-    if(number <= 0) { // (5) POSITIVE CHECK
+  
+    if(number <= 0) {
         document.getElementById("evenForOutput").innerHTML = "⚠️ Please enter a positive number greater than 0.";
         return;
     }
     
-    // Check if it's too large
-    if(number > 1000) { // (6) SIZE LIMIT
+  
+    if(number > 1000) {
         document.getElementById("evenForOutput").innerHTML = "⚠️ Number is too large. Please enter 1000 or less.";
         return;
     }
     
-    // Optional: Check if number is at least 2 para may even numbers
+  
     if(number < 2) {
         document.getElementById("evenForOutput").innerHTML = "⚠️ Please enter a number greater than or equal to 2 to see even numbers.";
         return;
@@ -121,43 +119,41 @@ document.getElementById("evenForForm").addEventListener("submit", function(e){
 });
 
 //factorial
-
-//factorial
 document.getElementById("factorialForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    let number = document.getElementById("factorialInput").value.trim(); // (1) TRIM
+    let number = document.getElementById("factorialInput").value.trim(); 
     
-    // VALIDATIONS
-    if(number === "") { // (2) EMPTY CHECK
+   
+    if(number === "") { 
         document.getElementById("factorialOutput").textContent = "⚠️ Please enter a number.";
         return;
     }
     
-    // Check if it's a number
-    if(isNaN(number)) { // (3) NUMBER CHECK
+  
+    if(isNaN(number)) { 
         document.getElementById("factorialOutput").textContent = "⚠️ Please enter a valid number.";
         return;
     }
     
-    // Check if it's an integer (walang decimal)
-    if(number.includes(".")) { // (4) INTEGER CHECK
+   
+    if(number.includes(".")) {
         document.getElementById("factorialOutput").textContent = "⚠️ Please enter a whole number (no decimals).";
         return;
     }
     
-    // Convert to integer
-    number = parseInt(number); // (5) CONVERT TO INTEGER
+  
+    number = parseInt(number); 
     
-    // Check if it's non-negative (0 is allowed for factorial: 0! = 1)
-    if(number < 0) { // (6) NON-NEGATIVE CHECK
+    
+    if(number < 0) { 
         document.getElementById("factorialOutput").textContent = "⚠️ Please enter a non-negative number (0 or positive).";
         return;
     }
     
-    // Check if it's too large (factorial grows very fast)
-    if(number > 20) { // (7) SIZE LIMIT - 20! is already very large
+
+    if(number > 20) {
         document.getElementById("factorialOutput").textContent = "⚠️ Number is too large. Please enter 20 or less for factorial.";
         return;
     }

@@ -1,29 +1,26 @@
 // Letter Grade Remarks
-
-// Letter Grade Remarks
 document.getElementById("letterGradeForm").addEventListener("submit", function(e){
     e.preventDefault();
 
-    let grade = document.getElementById("letterGradeInput").value.trim(); // (1) TRIM
+    let grade = document.getElementById("letterGradeInput").value.trim(); 
     
-    // VALIDATIONS
-    if(grade === "") { // (2) EMPTY CHECK
+
+    if(grade === "") { 
         document.getElementById("letterGradeOutput").textContent = "⚠️ Please enter a grade letter (A, B, C, D, F).";
-        return; // (3) TITIGIL DITO
+        return; 
     }
     
-    // Convert to uppercase para sa uniform checking
-    grade = grade.toUpperCase(); // (4) AUTO-UPPERCASE
+    grade = grade.toUpperCase(); 
     
-    // Check kung valid na letter grade (A, B, C, D, F)
+  
     const validGrades = ["A", "B", "C", "D", "F"];
-    if(!validGrades.includes(grade)) { // (5) VALID LETTER CHECK
+    if(!validGrades.includes(grade)) { 
         document.getElementById("letterGradeOutput").textContent = "⚠️ Please enter a valid grade letter (A, B, C, D, or F only).";
         return;
     }
     
-    // Check length - dapat isang character lang
-    if(grade.length !== 1) { // (6) LENGTH CHECK
+   
+    if(grade.length !== 1) { 
         document.getElementById("letterGradeOutput").textContent = "⚠️ Please enter only one letter.";
         return;
     }
@@ -51,7 +48,7 @@ document.getElementById("letterGradeForm").addEventListener("submit", function(e
 document.getElementById("gradeForm").addEventListener("submit", function(e){
     e.preventDefault();
 
-    let grade = document.getElementById("gradeInput").value.trim(); // (1) TRIM
+    let grade = document.getElementById("gradeInput").value.trim(); 
     
     
     if(grade === "") { 
@@ -104,32 +101,32 @@ document.getElementById("gradeForm").addEventListener("submit", function(e){
 document.getElementById("numberForm").addEventListener("submit", function(e){
     e.preventDefault();
 
-    let number = document.getElementById("numberInput").value.trim(); // (1) TRIM
+    let number = document.getElementById("numberInput").value.trim(); 
     
-    // VALIDATIONS
-    if(number === "") { // (2) EMPTY CHECK
+    
+    if(number === "") { 
         document.getElementById("numberOutput").textContent = "⚠️ Please enter a number.";
         return;
     }
     
-    // Check if it's a valid number
-    if(isNaN(number)) { // (3) NUMBER CHECK
+   
+    if(isNaN(number)) { 
         document.getElementById("numberOutput").textContent = "⚠️ Please enter a valid number.";
         return;
     }
     
-    // Convert to number
-    number = parseFloat(number); // (4) CONVERT TO NUMBER
+   
+    number = parseFloat(number);
     
-    // Check if it's too large or too small
-    if(number > 1000000 || number < -1000000) { // (5) SIZE CHECK
+   
+    if(number > 1000000 || number < -1000000) { 
         document.getElementById("numberOutput").textContent = "⚠️ Number is too large. Please enter between -1,000,000 and 1,000,000.";
         return;
     }
     
-    // Optional: Check if it's an integer for whole number classification
+    
     if(Number.isInteger(number)) {
-        // Para sa integer, okay lang
+       
         console.log("Integer detected");
     }
 
