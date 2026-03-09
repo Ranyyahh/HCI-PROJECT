@@ -549,7 +549,7 @@ body {
     }
     
     .back-btn {
-        margin-top: 100px;
+        margin-top: 150px;
         font-size: 24px;
         padding: 8px 15px;
         margin-left: 30px;
@@ -560,7 +560,204 @@ body {
     height: 30px; 
     object-fit: contain;
     margin-left: -20px;
-}
+    }
+
+    
+    .section-label {
+        font-weight: bold;
+        font-size: clamp(20px, 3vw, 25px);
+        display: block;
+        text-align: center;   
+        margin-top: -40px;
+        margin-left: 0px; 
+    }   
+
+
+      #sample1 .sample-left form label:not(.section-label) {
+        line-height: 35px;
+        font-size: clamp(18px, 2.5vw, 23px);
+        white-space: nowrap;
+        position: relative;
+        top: -60px; 
+        transform: translateY(-1px); 
+        margin-left: 0px;
+         font-family: 'DM Sans', sans-serif;
+     }
+
+    #letterGradeInput {
+        max-width: 250px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+        top: -50px;
+    }   
+        
+    #sample1 .add-btn {
+        display: block;
+        margin-top:-100px;
+        margin-left: 80px;
+        padding: 8px 8px;
+        border-radius: 8px;
+        width: auto;
+        min-width: 200px;
+    }
+
+
+   .reset-btn{
+        margin-left: 110px;
+    }
+
+    #sample2 .section-label {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+     #sample2 .sample-left form label:not(.section-label) {
+        line-height: 35px;
+        font-size: clamp(18px, 2.5vw, 23px);
+        white-space: nowrap;
+        position: relative;
+        top: -60px; 
+        transform: translateY(-1px); 
+        margin-left: 110px;
+         font-family: 'DM Sans', sans-serif;
+     }
+
+    #gradeInput {
+        max-width: 250px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+        margin-left: 50px;
+        top: -50px;
+    }   
+        
+    #sample2 .add-btn {
+        display: block;
+        margin-top:-60px;
+        margin-left: 80px;
+        padding: 8px 8px;
+        border-radius: 8px;
+        width: auto;
+        min-width: 200px;
+    }
+
+
+    #sample3.section-label {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+     #sample3 .sample-left form label:not(.section-label) {
+        line-height: 35px;
+        font-size: clamp(18px, 2.5vw, 23px);
+        white-space: nowrap;
+        position: relative;
+        top: -60px; 
+        transform: translateY(-1px); 
+        margin-left: 10px;
+         font-family: 'DM Sans', sans-serif;
+     }
+
+    #numberInput {
+        max-width: 250px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+        margin-left: 10px;
+        top: -50px;
+    }   
+        
+    #sample3 .add-btn {
+        display: block;
+        margin-top:-100px;
+        margin-left: 80px;
+        padding: 8px 8px;
+        border-radius: 8px;
+        width: auto;
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+    
+    
+      #sample4.section-label {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+     #sample4 .sample-left form label:not(.section-label) {
+        line-height: 35px;
+        font-size: clamp(18px, 2.5vw, 23px);
+        white-space: nowrap;
+        position: relative;
+        top: -60px; 
+        transform: translateY(-1px); 
+        margin-left: 10px;
+         font-family: 'DM Sans', sans-serif;
+     }
+
+    #evenOddInput {
+        max-width: 250px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+        margin-left: 10px;
+        top: -50px;
+    }   
+        
+    #sample4 .add-btn {
+        display: block;
+        margin-top:-100px;
+        margin-left: 80px;
+        padding: 8px 8px;
+        border-radius: 8px;
+        width: auto;
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+
+    #sample4 .output-box{
+        height: 200px;
+    }
+
+    
+
+   #sample5 .section-label {
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+
+     #sample5 .sample-left form label:not(.section-label) {
+        line-height: 35px;
+        font-size: clamp(18px, 2.5vw, 23px);
+        white-space: nowrap;
+        position: relative;
+        top: -60px; 
+        transform: translateY(-1px); 
+        margin-left: 10px;
+         font-family: 'DM Sans', sans-serif;
+     }
+
+    #ageInput {
+        max-width: 250px;
+        height: 40px;
+        margin: 0;
+        position: relative;
+        margin-left: 10px;
+        top: -50px;
+    }   
+        
+    #sample5 .add-btn {
+        display: block;
+        margin-top:-100px;
+        margin-left: 80px;
+        padding: 8px 8px;
+        border-radius: 8px;
+        width: auto;
+        min-width: 200px;
+        margin-bottom: 50px;
+    }
+
+  
 }
     
 

@@ -70,7 +70,7 @@ if(!isset($_SESSION['basic_io'])){
         <label>Enter Text:</label>
         <input type="text" id="reverseInput">
 
-        <br><br>sss
+        <br><br>
 
         <button type="submit" class="add-btn">Reverse</button>
 

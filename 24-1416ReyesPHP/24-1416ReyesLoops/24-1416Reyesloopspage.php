@@ -16,9 +16,11 @@ if(!isset($_SESSION['loops'])){
 }
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Loops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesLoopspage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
@@ -225,23 +227,23 @@ if(!isset($_SESSION['loops'])){
 <div id="sample5" class="sample-box">
 
 <div class="sample-left">
-    <form id="billingForm" method="POST">  <!-- Added method="POST" -->
+    <form id="billingForm" method="POST">  
 
         <label class="section-label">Input</label>
         <br><br>
 
         <label>Customer Name:</label>
-        <input type="text" name="customerName" id="customerName" required>  <!-- Added name attribute -->
+        <input type="text" name="customerName" id="customerName" required>  
 
         <br><br>
 
         <label>Class Code (1-3):</label>
-        <input type="number" name="classCode" id="classCode" required>  <!-- Added name attribute -->
+        <input type="number" name="classCode" id="classCode" required>  
 
         <br><br>
 
         <label>No. of Days:</label>
-        <input type="number" name="days" id="days" required>  <!-- Added name attribute -->
+        <input type="number" name="days" id="days" required>
 
         <br><br>
 
@@ -263,6 +265,12 @@ if(!isset($_SESSION['loops'])){
             the selected class code and number of days rented. 
             It applies the corresponding recreation fee and daily rate 
             to generate the final billing amount.
+            <br><br>
+
+            <strong>Legends</strong><br>
+            Class Code 1: SINGLE SUITE <br>
+            Class Code 2: SERVICE DELUXE <br>
+            Class Code 3: SERVICE PREMIERE <br>
         </p>
     </div>
 

@@ -16,9 +16,11 @@ if(!isset($_SESSION['variables'])){
 }
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Variables and Data Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesVariablepage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 
@@ -116,42 +118,42 @@ if(!isset($_SESSION['variables'])){
     </div>
 </div>
 
-<!-- SAMPLE 3 - Float Variable: Grade Average -->
-<div class="sample-header">
-    Sample 3 - <span>Float Variable: Grade Average</span>
-</div>
-<div id="sample3" class="sample-box">
-
-    <!-- LEFT (INPUT) -->
-    <div class="sample-left">
-        <form id="floatForm">
-            <label class="section-label">Input</label>
-            <label>Grade 1:</label>
-            <input type="number" id="grade1Input" step="0.01" min="50" max="100">
-            <br>
-            <label>Grade 2:</label>
-            <input type="number" id="grade2Input" step="0.01" min="50" max="100">
-            <br>
-            <label>Grade 3:</label>
-            <input type="number" id="grade3Input" step="0.01" min="50" max="100">
-            <br><br>
-            <button type="submit" class="add-btn">Compute Average</button>
-        </form>
+    <!-- SAMPLE 3 - Float Variable: Grade Average -->
+    <div class="sample-header">
+        Sample 3 - <span>Float Variable: Grade Average</span>
     </div>
+    <div id="sample3" class="sample-box">
 
-    <!-- MIDDLE (OUTPUT) -->
-    <div class="sample-middle">
-        <label>Output</label>
-        <div class="output-box" id="floatOutput"></div>
-        <button type="button" class="reset-btn" id="resetFloat">Reset</button>
-    </div>
+        <!-- LEFT (INPUT) -->
+        <div class="sample-left">
+            <form id="floatForm">
+                <label class="section-label">Input</label>
+                <label>Grade 1:</label>
+                <input type="number" id="grade1Input" step="0.01" min="50" max="100">
+                <br>
+                <label>Grade 2:</label>
+                <input type="number" id="grade2Input" step="0.01" min="50" max="100">
+                <br>
+                <label>Grade 3:</label>
+                <input type="number" id="grade3Input" step="0.01" min="50" max="100">
+                <br><br>
+                <button type="submit" class="add-btn">Compute Average</button>
+            </form>
+        </div>
 
-    <!-- RIGHT (DESCRIPTION) -->
-    <div class="sample-right">
-        <h4>Description</h4>
-        <p>This example demonstrates FLOAT variables. It shows how decimal numbers are processed and averaged with precise calculations.</p>
+        <!-- MIDDLE (OUTPUT) -->
+        <div class="sample-middle">
+            <label>Output</label>
+            <div class="output-box" id="floatOutput"></div>
+            <button type="button" class="reset-btn" id="resetFloat">Reset</button>
+        </div>
+
+        <!-- RIGHT (DESCRIPTION) -->
+        <div class="sample-right">
+            <h4>Description</h4>
+            <p>This example demonstrates FLOAT variables. It shows how decimal numbers are processed and averaged with precise calculations.</p>
+        </div>
     </div>
-</div>
 
 
 <!-- SAMPLE 4 - Boolean Variable: Password Check -->

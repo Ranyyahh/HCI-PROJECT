@@ -16,9 +16,11 @@ if(!isset($_SESSION['conditionals'])){
 }
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>Conditional Statements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="../../24-1416ReyesCSS/24-1416ReyesConditionalpage.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 

@@ -182,7 +182,6 @@ p {
 }
 
 
-/* SPECIFIC PARA SA VICTUS LAPTOP (1366x768 to 1600px) - PINAKA-ADJUSTED */
 @media screen and (min-width: 1366px) and (max-width: 1600px) {
       .header-text {
         font-size: 35px; 
@@ -192,10 +191,10 @@ p {
 
     .container {
       display: grid;
-        grid-template-columns: repeat(2, 1fr); /* dalawang columns na equal */
-        gap: 30px 30px; /* row-gap: 30px, column-gap: 50px - mas malaking column gap */
-        max-width: 700px; /* limit ang overall width */
-        margin: 10px auto 0; /* center ang container */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px 30px; 
+        max-width: 700px; 
+        margin: 10px auto 0;
         padding: 5 20px;
         justify-content: center;
         align-items: center;
@@ -207,28 +206,27 @@ p {
     }
 
     .box {
-      max-width: 380px; /* 280px -> 320px - pinalaki para mas maganda proportion */
+      max-width: 380px;
         width: 100%;
-        margin-left: -10px; /* dagdag left margin */
-        padding: 18px 15px; /* dagdag top-bottom padding */
+        margin-left: -10px; 
+        padding: 9px 15px;
         gap: 15px;
         margin-top: -20px;
     }
     
-    /* Para mas lumitaw yung images at text */
+   
     .box-img {
-        width: 70px; /* 80px -> 60px - binawasan para proportional */
-        height: 50px; /* 70px -> 50px */
+        width: 70px; 
+        height: 50px; 
         margin-left: -5px;
     }
     
-    /* Adjust text sizes para sa mas maliit na box */
     .box .Basic, 
     .box .Conditional, 
     .box .Variables, 
     .box .Loops {
-        font-size: 25px; /* mas maliit na font */
-        white-space: nowrap; /* para hindi mag-wrap ang text */
+        font-size: 25px;
+        white-space: nowrap;
     }
     
     p {
@@ -237,39 +235,73 @@ p {
     }
     
     .welcome-img {
-        max-width: 900px; /* 1000px -> 800px - binawasan */
+        max-width: 900px; 
         width: 100%;
         height: auto;
-        max-height: 280px; /* 310px -> 250px - binawasan height */
+        max-height: 280px; 
         padding-right: 0px;
         right: -40px;
          margin-bottom: 0px;
         margin: 0 auto;
         display: block;
-        object-fit: cover; /* para hindi mag-stretch */
+        object-fit: cover; 
     }
     
-    /* Individual box text adjustments */
+  
     .Basic {
-        margin-left: 15px; /* 25px -> 15px */
-        padding-right: 20px; /* 40px -> 20px */
+        margin-left: 15px;
+        padding-right: 20px;
 
     }
     
     .Conditional {
-        padding-right: 20px; /* 40px -> 20px */
+        padding-right: 20px;
 
     }
     
     .Variables {
-        margin-left: 15px; /* 25px -> 15px */
-        padding-right: 20px; /* 40px -> 20px */
+        margin-left: 15px;
+        padding-right: 20px; 
 
     }
     
     .Loops {
-        margin-left: 15px; /* 25px -> 15px */
+        margin-left: 15px; 
     }
+
+   
+.foot-bar {
+    width: 100%;
+    height: 75px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 4px;
+}
+
+.foot-fill {
+    width: 100%;
+    height: 100%;
+    background: #0e2d51;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.footer-text, .footer-text1 {
+    font-family: 'Dm Sans', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    margin: 2px 0;
+    margin-left: -5px;
+}
 }
 
     

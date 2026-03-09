@@ -458,7 +458,7 @@ body {
     }
     
     .back-btn {
-        margin-top: 100px;
+        margin-top: 150px;
         font-size: 24px;
         padding: 8px 15px;
         margin-left: 30px;
@@ -476,8 +476,8 @@ body {
         font-size: clamp(20px, 3vw, 25px);
         display: block;
         text-align: center;   
-        margin-top: -50px;
-        margin-left: 70px; 
+        margin-top: -40px;
+        margin-left: 80px; 
     }   
     
    #sample1 .sample-left form label:not(.section-label) {
@@ -496,7 +496,7 @@ body {
         align-items: center;
         justify-content: center;
         gap: 8px;
-        margin: 0 0 10px 0;
+        margin: 0 0 0px 0;
     }
 
     #reverseInput {
@@ -509,7 +509,7 @@ body {
         
     #sample1 .add-btn {
         display: block;
-        margin-top: -30px;
+        margin-top: -60px;
         margin-left: 85px;
         padding: 8px 8px;
         border-radius: 8px;
@@ -524,7 +524,7 @@ body {
         display: block;
         text-align: center;   
         margin-top: -40px;
-        margin-left: 70px; 
+        margin-left: 90px; 
     }
 
     #sample2 .sample-left label:not(.section-label) {
@@ -565,112 +565,159 @@ body {
     }
 
 
-#sample3 .section-label {
-       font-weight: bold;
-        font-size: clamp(20px, 3vw, 25px);
-        display: block;
-        text-align: center;   
-        margin-top: -20px;
-        margin-bottom: -40px;
-        margin-left: 70px;
-}
-
-#sample3 .sample-left label:not(.section-label) {
-    font-size: clamp(18px, 2.2vw, 21px); 
-    font-weight: normal;
-    line-height: normal; 
-    position: static;
-    top: auto; 
-    transform: none;
-    margin-left: 0; 
-    font-family: 'DM Sans', sans-serif;
-    display: inline-block; 
-}
-
-#sample3 .input-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 0px 0 10px 0; 
-}
-
-#num1Input {
-    font-size: clamp(15px, 2vw, 18px); 
-    height: 35px; 
-    margin-left: 5px;
-    width: 100%;
-    max-width: 180px; 
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#num2Input {
-    font-size: clamp(15px, 2vw, 18px); 
-    height: 35px;
-    margin: 8px 0; 
-    width: 100%;
-    max-width: 180px; 
-    display: inline-block;
-    vertical-align: middle;
-}
-
-
-#sample3 .add-btn {
-    display: block;
-    margin: 10px auto;
-    padding: 8px 25px; /* KAGAYA NG SAMPLE 2 */
-    border-radius: 8px;
-    width: auto;
-    min-width: 180px; /* KAGAYA NG SAMPLE 2 */
-    font-size: 15px; /* KAGAYA NG SAMPLE 2 */
-}
-
-    #sample4 .sample-left label:not(.section-label) {
-        font-size: clamp(18px, 2.5vw, 23px);
-        font-weight: normal;
+    #sample3 .section-label {
+        font-weight: bold;
+            font-size: clamp(20px, 3vw, 25px);
+            display: block;
+            text-align: center;   
+            margin-top: -20px;
+            margin-bottom: -40px;
+            margin-left: 70px;
     }
 
-    #weightInput, #heightInput {
-        font-size: clamp(16px, 2vw, 20px);
-        height: 37px;
-        margin: 10px 0;
+    #sample3 .sample-left label:not(.section-label) {
+        font-size: clamp(18px, 2.2vw, 21px); 
+        font-weight: normal;
+        line-height: normal; 
+        position: static;
+        top: auto; 
+        transform: none;
+        margin-left: 0; 
+        font-family: 'DM Sans', sans-serif;
+        display: inline-block; 
+    }
+
+    #sample3 .input-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 0px 0 10px 0; 
+    }
+
+    #num1Input {
+        font-size: clamp(15px, 2vw, 18px); 
+        height: 35px; 
+        margin-left: 5px;
         width: 100%;
-        max-width: 200px;
+        max-width: 180px; 
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #num2Input {
+        font-size: clamp(15px, 2vw, 18px); 
+        height: 35px;
+        margin: 8px 0; 
+        width: 100%;
+        max-width: 180px; 
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    #sample3 .add-btn {
+    display: block;
+            margin-top: -20px;
+            margin-left: 108px;
+            padding: 8px 8px;
+            border-radius: 8px;
+            width: auto;
+            min-width: 180px;
+    }
+
+    #sample4 .section-label {
+          font-weight: bold;
+            font-size: clamp(20px, 3vw, 25px);
+            display: block;
+            text-align: center;   
+            margin-top: -20px;
+            margin-bottom: -40px;
+            margin-left: 70px;
+    }
+
+    #sample4 .sample-left label:not(.section-label) {
+        font-size: clamp(16px, 2.2vw, 21px);
+        font-weight: normal;
+        margin: 5px 0;
+    }
+
+    #weightInput {
+        font-size: clamp(15px, 2vw, 18px); 
+        height: 35px;
+        margin: 8px 0; 
+        margin-left: 2px;
+        width: 100%;
+        max-width: 180px; 
+    }
+
+    #heightInput {
+        font-size: clamp(15px, 2vw, 18px); 
+        height: 35px;
+        margin: 8px 0; 
+        width: 100%;
+        max-width: 180px; 
     }
 
     #sample4 .add-btn {
         display: block;
-        margin: 10px auto;
-        padding: 10px 30px;
+        margin: -20px auto;
+        padding: 8px 25px;
         border-radius: 8px;
         width: auto;
-        min-width: 200px;
+        min-width: 180px; 
+        font-size: 15px;
+        margin-left: 125px;
+        margin-bottom: 10px;
+        font-size: 20px;
     }
 
+    #sample4 .sample-right {
+        margin-top: 0px;
+    }
+
+
+     #sample5 .section-label {
+        font-weight: bold;
+         font-size: clamp(20px, 3vw, 25px);
+        display: block;
+        text-align: center;   
+        margin-left: 70px;
+        margin-bottom: -40px;
+    }
 
     #sample5 .sample-left label:not(.section-label) {
-        font-size: clamp(18px, 2.5vw, 23px);
+        font-size: clamp(16px, 2.2vw, 21px); 
         font-weight: normal;
+        margin: 5px 0;
     }
 
-    #mul1Input, #mul2Input {
-        font-size: clamp(16px, 2vw, 20px);
-        height: 37px;
-        margin: 10px 0;
+    #mul1Input {
+        font-size: clamp(15px, 2vw, 18px); 
+        height: 35px; 
+        margin: 8px 0; 
         width: 100%;
-        max-width: 200px;
+        margin-left: 5px;
+        max-width: 180px; 
     }
+
+     #mul2Input {
+        font-size: clamp(15px, 2vw, 18px); 
+        height: 35px; 
+        margin: 8px 0; 
+        width: 100%;
+        max-width: 180px; 
+     }
 
     #sample5 .add-btn {
         display: block;
-        margin: 10px auto;
-        padding: 10px 30px;
+        margin: -20px auto;
+        padding: 8px 25px; 
         border-radius: 8px;
+        margin-left: 110px;
         width: auto;
-        min-width: 200px;
+        min-width: 180px; 
+        font-size: 17px;
     }
-
     
     .sample-middle label {
         font-size: clamp(18px, 2.2vw, 22px);
