@@ -66,7 +66,7 @@ if(!isset($_SESSION['variables'])){
             <label class="section-label">Input</label>
             <br><br>
             <label>Enter your name:</label>
-            <input type="text" id="stringInput">
+            <input type="text" id="stringInput" required>
             <br><br>
             <button type="submit" class="add-btn">Process</button>
         </form>
@@ -98,7 +98,7 @@ if(!isset($_SESSION['variables'])){
             <label class="section-label">Input</label>
             <br><br>
             <label>Enter your birth year:</label>
-            <input type="number" id="birthYearInput" min="1900" max="<?= date("Y") ?>">
+            <input type="number" id="birthYearInput" min="1900" max="<?= date("Y") ?>" required>
             <br><br>
             <button type="submit" class="add-btn">Calculate Age</button>
         </form>
@@ -129,13 +129,13 @@ if(!isset($_SESSION['variables'])){
             <form id="floatForm">
                 <label class="section-label">Input</label>
                 <label>Grade 1:</label>
-                <input type="number" id="grade1Input" step="0.01" min="50" max="100">
+                <input type="number" id="grade1Input" step="0.01" min="50" max="100" required>
                 <br>
                 <label>Grade 2:</label>
-                <input type="number" id="grade2Input" step="0.01" min="50" max="100">
+                <input type="number" id="grade2Input" step="0.01" min="50" max="100" required>
                 <br>
                 <label>Grade 3:</label>
-                <input type="number" id="grade3Input" step="0.01" min="50" max="100">
+                <input type="number" id="grade3Input" step="0.01" min="50" max="100" required>
                 <br><br>
                 <button type="submit" class="add-btn">Compute Average</button>
             </form>
@@ -168,7 +168,7 @@ if(!isset($_SESSION['variables'])){
             <label class="section-label">Input</label>
             <br><br>
             <label>Enter password:</label>
-            <input type="password" id="passwordInput" >
+            <input type="password" id="passwordInput" required>
             <br><br>
             <button type="submit" class="add-btn">Check Password</button>
         </form>
@@ -199,10 +199,10 @@ if(!isset($_SESSION['variables'])){
         <form id="multiTypeForm">
             <label class="section-label">Input</label>
             <label>Student Name:</label>
-            <input type="text" id="studentNameInput">
+            <input type="text" id="studentNameInput" required>
             <br>
             <label>Age:</label>
-            <input type="number" id="studentAgeInput" min="0" >
+            <input type="number" id="studentAgeInput" min="0" required>
             <br>
             <button type="submit" class="add-btn">Process Info</button>
         </form>

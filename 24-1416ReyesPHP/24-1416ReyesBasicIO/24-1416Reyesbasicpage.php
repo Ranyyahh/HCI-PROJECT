@@ -68,7 +68,7 @@ if(!isset($_SESSION['basic_io'])){
         <br><br>
 
         <label>Enter Text:</label>
-        <input type="text" id="reverseInput">
+        <input type="text" id="reverseInput" required>
 
         <br><br>
 
@@ -108,7 +108,7 @@ if(!isset($_SESSION['basic_io'])){
             <br><br>
 
             <label>Enter Name:</label>
-            <input type="text" id="nameInput">
+            <input type="text" id="nameInput" required>
 
             <br><br>
 
@@ -150,12 +150,12 @@ if(!isset($_SESSION['basic_io'])){
             <br><br>
 
             <label>Number 1:</label>
-            <input type="number" id="num1Input">
+            <input type="number" id="num1Input" required>
 
             <br>
 
             <label>Number 2:</label>
-            <input type="number" id="num2Input">
+            <input type="number" id="num2Input" required>
 
             <br><br>
 
@@ -197,12 +197,12 @@ if(!isset($_SESSION['basic_io'])){
             <br><br>
 
             <label>Weight (kg):</label>
-            <input type="number" id="weightInput" step="0.01" min="0">
+            <input type="number" id="weightInput" step="0.01" min="0" required>
 
             <br>
 
             <label>Height (cm):</label>
-            <input type="number" id="heightInput"  step="0.01" min="0">
+            <input type="number" id="heightInput"  step="0.01" min="0" required>
 
             <br><br>
 
@@ -245,12 +245,12 @@ if(!isset($_SESSION['basic_io'])){
             <br><br>
 
             <label>Number 1:</label>
-            <input type="number" id="mul1Input">
+            <input type="number" id="mul1Input" required>
 
             <br>
 
             <label>Number 2:</label>
-            <input type="number" id="mul2Input">
+            <input type="number" id="mul2Input" required>
 
             <br><br>
 

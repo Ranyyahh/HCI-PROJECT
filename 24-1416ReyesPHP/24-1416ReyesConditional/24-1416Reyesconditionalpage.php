@@ -72,7 +72,7 @@ if(!isset($_SESSION['conditionals'])){
             <br><br>
 
             <label>Enter the Letter Grade:</label>
-            <input type="text" id="letterGradeInput" maxlength="1">
+            <input type="text" id="letterGradeInput" maxlength="1" required>
 
             <br><br>
 
@@ -114,7 +114,7 @@ if(!isset($_SESSION['conditionals'])){
             <br><br>
 
             <label>Enter Grade:</label>
-            <input type="number" id="gradeInput" min="50" max="100">
+            <input type="number" id="gradeInput" min="50" max="100" required>
 
             <br><br>
 
@@ -154,7 +154,7 @@ if(!isset($_SESSION['conditionals'])){
             <br><br>
 
             <label>Enter a Number:</label>
-            <input type="number" id="numberInput">
+            <input type="number" id="numberInput" required>
 
             <br><br>
 
@@ -193,7 +193,7 @@ if(!isset($_SESSION['conditionals'])){
             <br><br>
 
             <label>Enter a Number:</label>
-            <input type="number" id="evenOddInput">
+            <input type="number" id="evenOddInput" required>
 
             <br><br>
 
@@ -238,7 +238,7 @@ if(!isset($_SESSION['conditionals'])){
             <br><br>
 
             <label>Enter Your Age:</label>
-            <input type="number" id="ageInput" min="0">
+            <input type="number" id="ageInput" min="0" required>
 
             <br><br>
 

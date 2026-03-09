@@ -70,7 +70,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Generate numbers from 1 to:</label>
-            <input type="number" id="forLoopInput" min="1">
+            <input type="number" id="forLoopInput" min="1" required>
 
             <br><br>
 
@@ -113,7 +113,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter maximum number:</label>
-            <input type="number" id="evenForInput" min="2">
+            <input type="number" id="evenForInput" min="2" required>
 
             <br><br>
 
@@ -155,7 +155,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter a number:</label>
-            <input type="number" id="factorialInput" min="1">
+            <input type="number" id="factorialInput" min="1" required>
 
             <br><br>
 
@@ -194,7 +194,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter a number:</label>
-            <input type="number" id="reverseWhileInput" min="1" max="999999999">
+            <input type="number" id="reverseWhileInput" min="1" max="999999999" required>
 
             <br><br>
 
