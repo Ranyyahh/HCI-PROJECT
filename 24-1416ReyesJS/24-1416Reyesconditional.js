@@ -1,10 +1,32 @@
 // Letter Grade Remarks
 
+// Letter Grade Remarks
 document.getElementById("letterGradeForm").addEventListener("submit", function(e){
-
     e.preventDefault();
 
-    let grade = document.getElementById("letterGradeInput").value;
+    let grade = document.getElementById("letterGradeInput").value.trim(); // (1) TRIM
+    
+    // VALIDATIONS
+    if(grade === "") { // (2) EMPTY CHECK
+        document.getElementById("letterGradeOutput").textContent = "⚠️ Please enter a grade letter (A, B, C, D, F).";
+        return; // (3) TITIGIL DITO
+    }
+    
+    // Convert to uppercase para sa uniform checking
+    grade = grade.toUpperCase(); // (4) AUTO-UPPERCASE
+    
+    // Check kung valid na letter grade (A, B, C, D, F)
+    const validGrades = ["A", "B", "C", "D", "F"];
+    if(!validGrades.includes(grade)) { // (5) VALID LETTER CHECK
+        document.getElementById("letterGradeOutput").textContent = "⚠️ Please enter a valid grade letter (A, B, C, D, or F only).";
+        return;
+    }
+    
+    // Check length - dapat isang character lang
+    if(grade.length !== 1) { // (6) LENGTH CHECK
+        document.getElementById("letterGradeOutput").textContent = "⚠️ Please enter only one letter.";
+        return;
+    }
 
     fetch("24-1416Reyeslettergrade_process.php", {
         method: "POST",
@@ -15,23 +37,48 @@ document.getElementById("letterGradeForm").addEventListener("submit", function(e
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("letterGradeOutput").textContent = data;
-
         localStorage.setItem("letterGradeInput", grade);
         localStorage.setItem("letterGradeOutput", data);
-
+    })
+    .catch(error => {
+        document.getElementById("letterGradeOutput").textContent = "❌ Error processing request.";
+        console.error("Error:", error);
     });
-
 });
 
 // Pass or Fail
-
 document.getElementById("gradeForm").addEventListener("submit", function(e){
-
     e.preventDefault();
 
-    let grade = document.getElementById("gradeInput").value;
+    let grade = document.getElementById("gradeInput").value.trim(); // (1) TRIM
+    
+    
+    if(grade === "") { 
+        document.getElementById("gradeOutput").textContent = "⚠️ Please enter your grade.";
+        return;
+    }
+    
+    
+    if(isNaN(grade)) { 
+        document.getElementById("gradeOutput").textContent = "⚠️ Please enter a valid number.";
+        return;
+    }
+    
+   
+    grade = parseFloat(grade); 
+    
+    
+    if(grade < 0 || grade > 100) { 
+        document.getElementById("gradeOutput").textContent = "⚠️ Grade must be between 0 and 100.";
+        return;
+    }
+    
+    
+    if((grade * 100) % 1 !== 0) { 
+        document.getElementById("gradeOutput").textContent = "⚠️ Please enter grade with maximum 2 decimal places.";
+        return;
+    }
 
     fetch("24-1416Reyespassfail_process.php", {
         method: "POST",
@@ -42,23 +89,49 @@ document.getElementById("gradeForm").addEventListener("submit", function(e){
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("gradeOutput").textContent = data;
-
         localStorage.setItem("gradeInput", grade);
         localStorage.setItem("gradeOutput", data);
-
+    })
+    .catch(error => {
+        document.getElementById("gradeOutput").textContent = "❌ Error processing request.";
+        console.error("Error:", error);
     });
-
 });
 
+
 // Number Classification
-
 document.getElementById("numberForm").addEventListener("submit", function(e){
-
     e.preventDefault();
 
-    let number = document.getElementById("numberInput").value;
+    let number = document.getElementById("numberInput").value.trim(); // (1) TRIM
+    
+    // VALIDATIONS
+    if(number === "") { // (2) EMPTY CHECK
+        document.getElementById("numberOutput").textContent = "⚠️ Please enter a number.";
+        return;
+    }
+    
+    // Check if it's a valid number
+    if(isNaN(number)) { // (3) NUMBER CHECK
+        document.getElementById("numberOutput").textContent = "⚠️ Please enter a valid number.";
+        return;
+    }
+    
+    // Convert to number
+    number = parseFloat(number); // (4) CONVERT TO NUMBER
+    
+    // Check if it's too large or too small
+    if(number > 1000000 || number < -1000000) { // (5) SIZE CHECK
+        document.getElementById("numberOutput").textContent = "⚠️ Number is too large. Please enter between -1,000,000 and 1,000,000.";
+        return;
+    }
+    
+    // Optional: Check if it's an integer for whole number classification
+    if(Number.isInteger(number)) {
+        // Para sa integer, okay lang
+        console.log("Integer detected");
+    }
 
     fetch("24-1416Reyesnumber_process.php", {
         method: "POST",
@@ -69,14 +142,14 @@ document.getElementById("numberForm").addEventListener("submit", function(e){
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("numberOutput").textContent = data;
-
         localStorage.setItem("numberInput", number);
         localStorage.setItem("numberOutput", data);
-
+    })
+    .catch(error => {
+        document.getElementById("numberOutput").textContent = "❌ Error processing request.";
+        console.error("Error:", error);
     });
-
 });
 
 
@@ -120,12 +193,40 @@ document.getElementById("evenOddForm").addEventListener("submit", function(e){
 });
 
 // Voting Qualification Checker
-
 document.getElementById("ageForm").addEventListener("submit", function(e){
-
     e.preventDefault();
 
-    let age = document.getElementById("ageInput").value;
+    let age = document.getElementById("ageInput").value.trim(); 
+    
+   
+    if(age === "") { 
+        document.getElementById("ageOutput").textContent = "⚠️ Please enter your age.";
+        return;
+    }
+    
+
+    if(isNaN(age)) {
+        document.getElementById("ageOutput").textContent = "⚠️ Please enter a valid number for age.";
+        return;
+    }
+    
+
+    if(!Number.isInteger(parseFloat(age))) { 
+        document.getElementById("ageOutput").textContent = "⚠️ Age must be a whole number.";
+        return;
+    }
+    
+
+    age = parseInt(age); 
+    
+    if(age < 1 || age > 120) { 
+        document.getElementById("ageOutput").textContent = "⚠️ Please enter a realistic age (1-120 years).";
+        return;
+    }
+    
+    if(age < 18) {
+        console.log("Below voting age");
+    }
 
     fetch("24-1416Reyesvoting_process.php", {
         method: "POST",
@@ -136,43 +237,15 @@ document.getElementById("ageForm").addEventListener("submit", function(e){
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("ageOutput").textContent = data;
-
         localStorage.setItem("ageInput", age);
         localStorage.setItem("ageOutput", data);
-
-    });
-
-});
-
-// Voting Qualification Checker
-
-document.getElementById("ageForm").addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    let age = document.getElementById("ageInput").value;
-
-    fetch("24-1416Reyesvoting_process.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: "age=" + encodeURIComponent(age)
     })
-    .then(response => response.text())
-    .then(data => {
-
-        document.getElementById("ageOutput").textContent = data;
-
-        localStorage.setItem("ageInput", age);
-        localStorage.setItem("ageOutput", data);
-
+    .catch(error => {
+        document.getElementById("ageOutput").textContent = "❌ Error processing request.";
+        console.error("Error:", error);
     });
-
 });
-
 
 
 // Restore data from localStorage

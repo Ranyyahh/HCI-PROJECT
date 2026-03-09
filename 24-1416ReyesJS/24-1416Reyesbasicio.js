@@ -1,10 +1,20 @@
 
 // Reverse
 document.getElementById("reverseForm").addEventListener("submit", function(e) {
-
     e.preventDefault();
 
-    let text = document.getElementById("reverseInput").value;
+    let text = document.getElementById("reverseInput").value.trim();
+    
+    // CLIENT-SIDE VALIDATION
+    if(text === "") {
+        document.getElementById("reverseOutput").textContent = "Please enter some text.";
+        return;
+    }
+    
+    if(text.length > 1000) {
+        document.getElementById("reverseOutput").textContent = "Text is too long.";
+        return;
+    }
 
     fetch("24-1416Reyesreverse_process.php", {
         method: "POST",
@@ -15,23 +25,33 @@ document.getElementById("reverseForm").addEventListener("submit", function(e) {
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("reverseOutput").textContent = data;
         localStorage.setItem("reverseInput", text);
         localStorage.setItem("reverseOutput", data);
-
     });
-
 });
 
 
 // Name Greeting
-
 document.getElementById("greetForm").addEventListener("submit", function(e) {
-
     e.preventDefault();
 
-    let name = document.getElementById("nameInput").value;
+    let name = document.getElementById("nameInput").value.trim();
+
+    if(name === "") {
+        document.getElementById("greetOutput").textContent = "Please enter your name.";
+        return;
+    }
+    
+    if(name.length > 100) {
+        document.getElementById("greetOutput").textContent = "Name is too long.";
+        return;
+    }
+    
+    if(/\d/.test(name)) {
+        document.getElementById("greetOutput").textContent = "Please do not include numbers.";
+        return;
+    }
 
     fetch("24-1416Reyesgreet_process.php", {
         method: "POST",
@@ -42,24 +62,34 @@ document.getElementById("greetForm").addEventListener("submit", function(e) {
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("greetOutput").textContent = data;
         localStorage.setItem("nameInput", name);
         localStorage.setItem("greetOutput", data);
-
     });
-
 });
 
 
 // Sum of Two Numbers
-
 document.getElementById("sumForm").addEventListener("submit", function(e){
-
     e.preventDefault();
 
-    let num1 = document.getElementById("num1Input").value;
-    let num2 = document.getElementById("num2Input").value;
+    let num1 = document.getElementById("num1Input").value.trim();
+    let num2 = document.getElementById("num2Input").value.trim();
+    
+    if(num1 === "" || num2 === "") {
+        document.getElementById("sumOutput").textContent = "Please enter both numbers.";
+        return;
+    }
+    
+    if(isNaN(num1) || isNaN(num2)) {
+        document.getElementById("sumOutput").textContent = "Please enter valid numbers.";
+        return;
+    }
+    
+    if(Math.abs(parseFloat(num1)) > 999999999 || Math.abs(parseFloat(num2)) > 999999999) {
+        document.getElementById("sumOutput").textContent = "Numbers are too large.";
+        return;
+    }
 
     fetch("24-1416Reyessum_process.php", {
         method: "POST",
@@ -71,14 +101,11 @@ document.getElementById("sumForm").addEventListener("submit", function(e){
     })
     .then(response => response.text())
     .then(data => {
-
         document.getElementById("sumOutput").textContent = data;
         localStorage.setItem("num1Input", num1);
         localStorage.setItem("num2Input", num2);
         localStorage.setItem("sumOutput", data);
-
     });
-
 });
 
 // BMI Calculator
@@ -136,7 +163,6 @@ document.getElementById("bmiForm").addEventListener("submit", function(e){
 
 
 //Multiply Two Numbers
-
 document.getElementById("multiplyForm").addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -285,3 +311,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+

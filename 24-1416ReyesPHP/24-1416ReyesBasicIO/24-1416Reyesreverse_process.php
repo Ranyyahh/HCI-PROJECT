@@ -1,11 +1,18 @@
 <?php
-if(isset($_POST['reverse'])){
-    $text = $_POST['reverse'];
+header('Content-Type: text/plain; charset=utf-8');
+
+if(isset($_POST['reverse'])) {
+    $text = trim($_POST['reverse']);
     
-    if(preg_match('/[0-9]/', $text)) {
-        echo "Error: Please enter text only.";
-    } else {
-        echo "Reversed: " . strrev($text);
+
+    if(empty($text)) {
+        echo "Error: Please enter some text.";
+    }
+    else if(strlen($text) > 1000) {
+        echo "Error: Text is too long.";
+    }
+    else {
+        echo "Reversed: " . htmlspecialchars(strrev($text), ENT_QUOTES, 'UTF-8');
     }
 }
 ?>
