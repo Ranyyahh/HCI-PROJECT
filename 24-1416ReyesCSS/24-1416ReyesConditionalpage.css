@@ -602,6 +602,10 @@ body {
         min-width: 200px;
     }
 
+      #sample1 .output-box {
+      height: 100px; 
+    }
+
 
    .reset-btn{
         margin-left: 110px;
@@ -757,7 +761,9 @@ body {
         margin-bottom: 50px;
     }
 
-  
+    #sample5 .output-box {
+    height: 100px;
+}
 }
     
 

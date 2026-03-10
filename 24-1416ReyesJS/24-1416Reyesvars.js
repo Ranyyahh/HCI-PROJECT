@@ -149,6 +149,23 @@ document.getElementById("multiTypeForm").addEventListener("submit", function(e) 
         return;
     }
 
+    let nameRegex = /^[A-Za-z\s]+$/;
+    if(!nameRegex.test(name)) {
+        document.getElementById("multiTypeOutput").innerHTML = "⚠️ Please enter a valid name (letters and spaces only).";
+        return;
+    }
+    
+
+    if(name.length < 2) {
+        document.getElementById("multiTypeOutput").innerHTML = "⚠️ Name must be at least 2 characters.";
+        return;
+    }
+    
+    if(name.length > 50) {
+        document.getElementById("multiTypeOutput").innerHTML = "⚠️ Name is too long (maximum 50 characters).";
+        return;
+    }
+
     if(age < 1 || age > 120) {
         document.getElementById("multiTypeOutput").innerHTML = "⚠️ Please enter a valid age (1-120).";
         return;

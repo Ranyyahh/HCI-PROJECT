@@ -1,17 +1,24 @@
-
-// Reverse
+// Reverse - NEED 2 CHARACTERS OR MORE
 document.getElementById("reverseForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     let text = document.getElementById("reverseInput").value.trim();
     
+    // EMPTY CHECK
     if(text === "") {
-        document.getElementById("reverseOutput").textContent = "Please enter some text.";
+        document.getElementById("reverseOutput").textContent = "⚠️ Please enter some text.";
         return;
     }
     
+    // 🔴 MINIMUM 2 CHARACTERS
+    if(text.length < 2) {
+        document.getElementById("reverseOutput").textContent = "⚠️ Please enter at least 2 characters.";
+        return;
+    }
+    
+    // MAX LENGTH CHECK
     if(text.length > 1000) {
-        document.getElementById("reverseOutput").textContent = "Text is too long.";
+        document.getElementById("reverseOutput").textContent = "⚠️ Text is too long (max 1000 characters).";
         return;
     }
 
@@ -28,6 +35,15 @@ document.getElementById("reverseForm").addEventListener("submit", function(e) {
         localStorage.setItem("reverseInput", text);
         localStorage.setItem("reverseOutput", data);
     });
+});
+
+// Blur validation - para mag-alert pag umalis sa field na 1 character lang
+document.getElementById("reverseInput").addEventListener("blur", function() {
+    let text = this.value.trim();
+    if(text && text.length < 2) {
+        alert("⚠️ Text should be at least 2 characters long.");
+        this.value = ""; // I-clear para mapilitan maglagay ng tama
+    }
 });
 
 

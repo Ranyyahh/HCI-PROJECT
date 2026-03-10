@@ -174,7 +174,7 @@ if(!isset($_SESSION['loops'])){
         <h4>Description</h4>
         <p>
             Uses a for loop to calculate the factorial
-            of the entered number.
+            of the entered number. As of now user can only input numbers from 1 to 20.
         </p>
     </div>
 
@@ -194,7 +194,7 @@ if(!isset($_SESSION['loops'])){
             <br><br>
 
             <label>Enter a number:</label>
-            <input type="number" id="reverseWhileInput" min="1" max="999999999" required>
+            <input type="number" id="reverseWhileInput" step="1" required>
 
             <br><br>
 
@@ -243,7 +243,7 @@ if(!isset($_SESSION['loops'])){
         <br><br>
 
         <label>No. of Days:</label>
-        <input type="number" name="days" id="days" required>
+        <input type="number" name="days" id="days" min="0" required>
 
         <br><br>
 

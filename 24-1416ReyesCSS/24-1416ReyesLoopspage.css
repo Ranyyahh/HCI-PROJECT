@@ -268,6 +268,7 @@ body {
 }
 
 
+
 #factorialForm {
     width: 100%;
     display: flex;
@@ -308,6 +309,26 @@ body {
     min-width: 200px;
 }
 
+#sample3 .output-box{
+     width: 100%;
+    max-width: 320px;
+    min-height:100px;
+    height: 90px; 
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;   
+    font-size: clamp(20px, 3vw, 25px);
+    font-weight: bold;
+    color: #000000;  
+    padding: 15px;
+    box-sizing: border-box;
+    display: block;
+    margin: 10px auto;
+    white-space: normal;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    word-wrap: break-word;
+}
 
 #reverseWhileForm {
     width: 100%;
@@ -349,9 +370,8 @@ body {
 #sample4 .output-box {
     width: 100%;
     max-width: 320px;
-    height: 80px;
     min-height: 80px;
-    max-height: 80px;
+    height: 90px; 
     background-color: #ffffff;
     border: 2px solid #000000;
     border-radius: 8px;   
@@ -362,9 +382,10 @@ body {
     box-sizing: border-box;
     display: block;
     margin: 10px auto;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+    white-space: normal;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    word-wrap: break-word; 
 }
 
 
@@ -373,8 +394,8 @@ body {
 }
 
 #sample4 .output-box::-webkit-scrollbar-thumb {
-    background: #2f4f7f;
     border-radius: 4px;
+    background: #808080;
 }
 
 #sample4 .output-box::-webkit-scrollbar-track {
@@ -814,11 +835,6 @@ body {
         margin-top: 0px;
         margin-left: 0px; 
 }
-  #sample5 .output-box {
-    min-height: 200px; 
-    height: auto; 
-    max-height: 200px; 
-}
 
 #sample5 .add-btn{
       display: block;
@@ -832,6 +848,12 @@ body {
 
 #sample5 .sample-right p{
     font-size: 17px;
+}
+
+#sample5 .output-box{
+    min-height: 240px;  /* PINALAKI: 200px → 280px */
+        height: auto;        /* AUTO ADJUST */
+        max-height: 240px;
 }
 
 .reset-btn{

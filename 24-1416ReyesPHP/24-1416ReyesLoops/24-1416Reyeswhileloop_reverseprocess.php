@@ -9,42 +9,44 @@ if(isset($_POST['number'])) {
         exit;
     }
     
-    if(!is_numeric($input)) {
-        echo "Please enter a valid number.";
+    // Check kung puro digits at negative sign lang
+    if(!preg_match('/^-?\d+$/', $input)) {
+        echo "Please enter a valid whole number.";
         exit;
     }
     
+    // Check decimal (kahit hindi na kailangan dahil sa regex above)
     if(strpos($input, '.') !== false) {
         echo "Please enter a whole number.";
         exit;
     }
     
-
+    // Bilangin ang digits (walang negative sign)
     $digits = ltrim($input, '-');
-    if(strlen($digits) > 9) {
-        echo "Maximum of 9 digits only.";
+    $digitCount = strlen($digits);
+    
+    if($digitCount > 9) {
+        echo "Maximum of 9 digits only. You entered $digitCount digits.";
         exit;
     }
     
-    if(strlen($digits) < 2) {
+    if($digitCount < 2) {
         echo "Please enter at least 2 digits.";
         exit;
     }
     
-    $num = intval($input);
-    $reversed = 0;
-    $workingNum = abs($num);
-    
-    while($workingNum > 0) {
-        $reversed = $reversed * 10 + ($workingNum % 10);
-        $workingNum = intval($workingNum / 10);
-    }
-    
-    if($num < 0) {
-        $reversed = -$reversed;
+    // STRING REVERSAL - hindi mathematical para iwas overflow
+    if($input < 0) {
+        // Para sa negative: tanggalin ang '-', i-reverse, ibalik ang '-'
+        $positive = substr($input, 1);
+        $reversedPositive = strrev($positive);
+        $reversed = '-' . $reversedPositive;
+    } else {
+        // Para sa positive: deretsong strrev lang
+        $reversed = strrev($input);
     }
     
     $_SESSION['loops']['sample4'] = $reversed;
-    echo $reversed;
+    echo "Reversed: $reversed";
 }
 ?>

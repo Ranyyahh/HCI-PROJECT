@@ -191,48 +191,50 @@ document.getElementById("reverseWhileForm").addEventListener("submit", function(
     
 
     if(number === "") { 
-        document.getElementById("reverseWhileOutput").textContent = "⚠️ Please enter a number.";
+        document.getElementById("reverseWhileOutput").textContent = " ⚠️ Please enter a number.";
         return;
     }
     
    
     if(isNaN(number)) { 
-        document.getElementById("reverseWhileOutput").textContent = "⚠️ Please enter a valid number.";
+        document.getElementById("reverseWhileOutput").textContent = " ⚠️ Please enter a valid number.";
         return;
     }
     
    
     if(number.includes(".")) { 
-        document.getElementById("reverseWhileOutput").textContent = "⚠️ Please enter a whole number (no decimals).";
+        document.getElementById("reverseWhileOutput").textContent = " ⚠️ Please enter a whole number (no decimals).";
+        return;
+    }
+   
+    let digits = number.replace('-', '').length;
+    
+   
+    if(digits > 9) { 
+        document.getElementById("reverseWhileOutput").textContent = "⚠️ Maximum of 9 digits only.";
         return;
     }
     
 
-    let originalNumber = parseInt(number);
-    
-  
-    if(Math.abs(originalNumber) > 1000000) { 
-        document.getElementById("reverseWhileOutput").textContent = "⚠️ Number is too large. Please enter between -1,000,000 and 1,000,000.";
+    if(digits < 2) {
+        document.getElementById("reverseWhileOutput").textContent = "⚠️ Please enter at least 2 digits.";
         return;
     }
-    
-    if(Math.abs(originalNumber) < 10 && Math.abs(originalNumber) >= 0) {
-        console.log("Single digit number - reverse is the same");
-    }
 
+    
     fetch("24-1416Reyeswhileloop_reverseprocess.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: "number=" + encodeURIComponent(originalNumber)
+        body: "number=" + encodeURIComponent(number) 
     })
     .then(response => response.text())
     .then(data => {
 
         document.getElementById("reverseWhileOutput").textContent = data;
 
-        localStorage.setItem("reverseWhileInput", originalNumber);
+        localStorage.setItem("reverseWhileInput", number);  
         localStorage.setItem("reverseWhileOutput", data);
 
     })
@@ -243,8 +245,8 @@ document.getElementById("reverseWhileForm").addEventListener("submit", function(
 
 });
 
-//biling process
 
+//billing process
 document.getElementById("billingForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -252,8 +254,29 @@ document.getElementById("billingForm").addEventListener("submit", function(e) {
     let classCode = document.getElementById("classCode").value;
     let days = document.getElementById("days").value;
 
+  
     if(name === "" || classCode === "" || days === "") {
         document.getElementById("multipleDoOutput").innerHTML = "Please complete all fields.";
+        return;
+    }
+
+  
+    let nameRegex = /^[A-Za-z\s]+$/;
+    if(!nameRegex.test(name)) {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "❌ Please enter a valid name (letters and spaces only).";
+        return;
+    }
+    
+    if(name.length < 2) {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "❌ Name must be at least 2 characters.";
+        return;
+    }
+    
+    if(name.length > 50) {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "❌ Name is too long (maximum 50 characters).";
         return;
     }
 
@@ -268,10 +291,14 @@ document.getElementById("billingForm").addEventListener("submit", function(e) {
             "Number of days must be greater than 0.";
         return;
     }
-
+    
+    if(days > 365) {
+        document.getElementById("multipleDoOutput").innerHTML = 
+            "Number of days cannot exceed 365.";
+        return;
+    }
 
     document.getElementById("multipleDoOutput").innerHTML = "Computing...";
-
 
     fetch("24-1416Reyesdowhile_billingprocess.php", {
         method: "POST",
@@ -291,7 +318,6 @@ document.getElementById("billingForm").addEventListener("submit", function(e) {
     .then(data => {
         document.getElementById("multipleDoOutput").innerHTML = data;
         
-
         localStorage.setItem("customerName", name);
         localStorage.setItem("classCode", classCode);
         localStorage.setItem("days", days);
@@ -303,7 +329,6 @@ document.getElementById("billingForm").addEventListener("submit", function(e) {
         console.error("Error:", error);
     });
 });
-
 
 //Restore data
 
